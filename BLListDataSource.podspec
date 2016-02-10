@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BLListDataSource"
-  s.version          = "0.9.0"
+  s.version          = "0.9.1"
   s.summary          = "BLListDataSource is a simple and powerfull method of fetching and maintainig list data from internet."
 
 # This description is used to generate tags and improve search results.
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.homepage         = "https://github.com/batkov/BLListDataSource"
   s.license          = 'MIT'
-  s.author           = { "Hariton Batkov" => "hariton.batkov@p-product.com" }
+  s.author           = { "Hariton Batkov" => "batkov@i.ua" }
   s.source           = { :git => "https://github.com/batkov/BLListDataSource.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/batkov111'
 
