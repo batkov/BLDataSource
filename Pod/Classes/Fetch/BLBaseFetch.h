@@ -27,6 +27,12 @@
 #import "BLDataKeys.h"
 #import "BLPaging.h"
 
+typedef NS_ENUM(NSInteger, BLFetchMode) {
+    BLFetchModeOnlineOffline, 
+    BLFetchModeOnlineOnly,
+    BLFetchModeOnfflineOnly,
+};
+
 @protocol BLBaseFetch <NSObject>
 
 - (void) fetchOnline:(BLPaging *__nullable) paging callback:(BLIdResultBlock __nonnull)callback;

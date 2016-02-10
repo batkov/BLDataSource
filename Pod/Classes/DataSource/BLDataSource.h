@@ -33,7 +33,6 @@ typedef NS_ENUM(NSInteger, BLDataSourceState) {
     BLDataSourceStateRefreshContent,
 };
 
-
 @protocol BLDataSourceDelegate;
 
 @interface BLDataSource : NSObject
@@ -49,7 +48,6 @@ typedef NS_ENUM(NSInteger, BLDataSourceState) {
 - (BOOL)canRefresh;
 
 @end
-
 
 @protocol BLDataSourceDelegate <NSObject>
 @optional

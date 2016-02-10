@@ -27,12 +27,6 @@
 #import "BLBaseFetch.h"
 #import "BLPaging.h"
 
-typedef NS_ENUM(NSInteger, BLFetchMode) {
-    BLFetchModeOnlineOffline,
-    BLFetchModeOnlineOnly,
-    BLFetchModeOnfflineOnly,
-};
-
 @interface BLListDataSource : BLDataSource
 @property (nonatomic, assign) BLFetchMode fetchMode; // BLFetchModeOnlineOffline by default
 @property (nonatomic, strong, readonly) BLDataStructure * dataStructure;
