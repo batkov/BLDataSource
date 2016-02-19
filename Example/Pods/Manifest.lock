@@ -1,5 +1,5 @@
 PODS:
-  - BLListDataSource (0.1.0)
+  - BLListDataSource (0.9.2)
 
 DEPENDENCIES:
   - BLListDataSource (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BLListDataSource: b507e92aaa86308eab208bad974de8ca3833f372
+  BLListDataSource: 1c1c2878dc8b9143d93fbf31aa2168256163670d
 
 COCOAPODS: 0.39.0
