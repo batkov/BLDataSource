@@ -41,7 +41,7 @@
                 return [BLSimpleListFetchResult fetchResultForLocalObject:object];
             }
             return [BLSimpleListFetchResult fetchResultForObject:object];
-        }
+        };
     }
     return self;
 }
