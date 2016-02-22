@@ -36,6 +36,12 @@
     if (self = [super init]) {
         self.pagingEnabled = YES;
         self.fetch = fetch;
+        self.fetchResultBlock = ^(id object, BOOL isLocal) {
+            if (isLocal) {
+                return [BLSimpleListFetchResult fetchResultForLocalObject:object];
+            }
+            return [BLSimpleListFetchResult fetchResultForObject:object];
+        }
     }
     return self;
 }
@@ -198,11 +204,17 @@
 
 #pragma mark - Abstract Methods
 - (BLBaseFetchResult * __nonnull) createFetchResultFor:(id)object {
-    return [BLSimpleListFetchResult fetchResultForObject:object]; // For subclassing
+    if (self.fetchResultBlock) {
+        return self.fetchResultBlock(object, NO);
+    }
+    return nil; // For subclassing
 }
 
 - (BLBaseFetchResult * __nonnull) createFetchResultForLocalObject:(id)object {
-    return [BLSimpleListFetchResult fetchResultForLocalObject:object]; // For subclassing
+    if (self.fetchResultBlock) {
+        return self.fetchResultBlock(object, YES);
+    }
+    return nil; // For subclassing
 }
 
 @end

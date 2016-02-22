@@ -26,6 +26,9 @@
 #import "BLDataStructure.h"
 #import "BLBaseFetch.h"
 #import "BLPaging.h"
+#import "BLBaseFetchResult.h"
+
+typedef BLBaseFetchResult*(^BLFetchResultBlock)(id object, BOOL isLocal);
 
 @interface BLListDataSource : BLDataSource
 @property (nonatomic, assign) BLFetchMode fetchMode; // BLFetchModeOnlineOffline by default
@@ -36,6 +39,7 @@
 @property (nonatomic, assign, readonly) BOOL canLoadMore;
 
 @property (nonatomic, copy) dispatch_block_t itemsChangedBlock;
+@property (nonatomic, copy) BLFetchResultBlock fetchResultBlock; // Will return results from BLSimpleListFetchResult by default
 
 - (instancetype) init NS_UNAVAILABLE;
 - (instancetype) new NS_UNAVAILABLE;
