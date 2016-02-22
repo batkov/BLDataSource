@@ -47,4 +47,6 @@
 - (void) insertItem:(id) item toSection:(NSUInteger) section;
 - (NSUInteger) dataSize;
 
+- (NSIndexPath *) indexPathForObject:(id <BLDataObject>) item;
+
 @end

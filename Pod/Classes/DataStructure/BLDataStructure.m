@@ -145,4 +145,18 @@
     return sourceArray; // For subclassing
 }
 
+- (NSIndexPath *) indexPathForObject:(id <BLDataObject>) item {
+    for (int section = 0; section < [self sectionsCount]; section++) {
+        for (int row = 0; row < [self itemsCountForSection:section]; row++) {
+            NSIndexPath * indexPath = [NSIndexPath indexPathForRow:row inSection:section];
+            id <BLDataObject> obj = [self objectForIndexPath:indexPath];
+            if (obj == item
+                || [[obj objectId] isEqualToString:[item objectId]]) {
+                return indexPath;
+            }
+        }
+    }
+    return nil;
+}
+
 @end
