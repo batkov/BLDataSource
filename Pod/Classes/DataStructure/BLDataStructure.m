@@ -159,4 +159,19 @@
     return nil;
 }
 
+#pragma mark -
+- (void)enumerateObjectsUsingBlock:(void (^)(id obj, NSUInteger idx, BOOL *stop))block {
+    BOOL stop = NO;
+    int index = 0;
+    for (int section = 0; section < [self sectionsCount]; section++) {
+        for (int row = 0; row < [self itemsCountForSection:section]; row++) {
+            NSIndexPath * indexPath = [NSIndexPath indexPathForRow:row inSection:section];
+            id <BLDataObject> obj = [self objectForIndexPath:indexPath];
+            
+            block(obj, index++, &stop);
+            if (stop)
+                break;
+        }
+    }
+}
 @end

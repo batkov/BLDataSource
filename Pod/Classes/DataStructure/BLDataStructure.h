@@ -27,7 +27,7 @@
 
 @class BLBaseFetchResult;
 
-@interface BLDataStructure : NSObject
+@interface BLDataStructure : NSObject <NSFastEnumeration>
 
 + (instancetype) dataStructureWithFetchResult:(BLBaseFetchResult *) fetchResult;
 
@@ -48,5 +48,8 @@
 - (NSUInteger) dataSize;
 
 - (NSIndexPath *) indexPathForObject:(id <BLDataObject>) item;
+
+#pragma mark -
+- (void)enumerateObjectsUsingBlock:(void (^)(id obj, NSUInteger idx, BOOL *stop))block;
 
 @end
