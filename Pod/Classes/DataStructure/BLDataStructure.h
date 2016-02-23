@@ -50,6 +50,6 @@
 - (NSIndexPath *) indexPathForObject:(id <BLDataObject>) item;
 
 #pragma mark -
-- (void)enumerateObjectsUsingBlock:(void (^)(id obj, NSUInteger idx, BOOL *stop))block;
+- (void)enumerateObjectsUsingBlock:(void (^)(id<BLDataObject> obj, NSIndexPath * indexPath, BOOL *stop))block;
 
 @end

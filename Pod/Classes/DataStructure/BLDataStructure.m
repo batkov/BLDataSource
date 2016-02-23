@@ -146,29 +146,26 @@
 }
 
 - (NSIndexPath *) indexPathForObject:(id <BLDataObject>) item {
-    for (int section = 0; section < [self sectionsCount]; section++) {
-        for (int row = 0; row < [self itemsCountForSection:section]; row++) {
-            NSIndexPath * indexPath = [NSIndexPath indexPathForRow:row inSection:section];
-            id <BLDataObject> obj = [self objectForIndexPath:indexPath];
-            if (obj == item
-                || [[obj objectId] isEqualToString:[item objectId]]) {
-                return indexPath;
-            }
+    __block NSIndexPath * indexPathToReturn = nil;
+    [self enumerateObjectsUsingBlock:^(id<BLDataObject> obj, NSIndexPath *indexPath, BOOL *stop) {
+        if (obj == item
+            || [[obj objectId] isEqualToString:[item objectId]]) {
+            indexPathToReturn = indexPath;
+            *stop = YES;
         }
-    }
-    return nil;
+    }];
+    return indexPathToReturn;
 }
 
 #pragma mark -
-- (void)enumerateObjectsUsingBlock:(void (^)(id obj, NSUInteger idx, BOOL *stop))block {
+- (void)enumerateObjectsUsingBlock:(void (^)(id<BLDataObject> obj, NSIndexPath * indexPath, BOOL *stop))block {
     BOOL stop = NO;
-    int index = 0;
     for (int section = 0; section < [self sectionsCount]; section++) {
         for (int row = 0; row < [self itemsCountForSection:section]; row++) {
             NSIndexPath * indexPath = [NSIndexPath indexPathForRow:row inSection:section];
             id <BLDataObject> obj = [self objectForIndexPath:indexPath];
             
-            block(obj, index++, &stop);
+            block(obj, indexPath, &stop);
             if (stop)
                 break;
         }
