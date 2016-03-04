@@ -27,7 +27,7 @@
 
 @class BLBaseFetchResult;
 
-@interface BLDataStructure : NSObject <NSFastEnumeration>
+@interface BLDataStructure : NSObject
 
 + (instancetype) dataStructureWithFetchResult:(BLBaseFetchResult *) fetchResult;
 
