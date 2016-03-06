@@ -143,7 +143,12 @@
 - (void) itemsLoaded:(BLBaseFetchResult *) fetchResult {
     if ([self shouldClearList]) {
         self.dataStructure = nil;
-        [self.fetch storeItems:fetchResult];
+        __weak typeof(self) selff = self;
+        [self.fetch storeItems:fetchResult callback:^(BOOL result, NSError * _Nullable error) {
+            if (selff.storedBlock) {
+                self.storedBlock(error);
+            }
+        }];
     }
     
     [self processFetchResult:fetchResult];

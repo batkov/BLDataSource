@@ -29,6 +29,7 @@
 #import "BLBaseFetchResult.h"
 
 typedef BLBaseFetchResult*(^BLFetchResultBlock)(id object, BOOL isLocal);
+typedef void (^BLItemsStoredBlock)(NSError * error);
 
 @interface BLListDataSource : BLDataSource
 @property (nonatomic, assign) BLFetchMode fetchMode; // BLFetchModeOnlineOffline by default
@@ -40,6 +41,7 @@ typedef BLBaseFetchResult*(^BLFetchResultBlock)(id object, BOOL isLocal);
 
 @property (nonatomic, copy) dispatch_block_t itemsChangedBlock;
 @property (nonatomic, copy) BLFetchResultBlock fetchResultBlock; // Will return results from BLSimpleListFetchResult by default
+@property (nonatomic, copy) BLItemsStoredBlock storedBlock; // Called after all objects stored
 
 - (instancetype) init NS_UNAVAILABLE;
 - (instancetype) new NS_UNAVAILABLE;
