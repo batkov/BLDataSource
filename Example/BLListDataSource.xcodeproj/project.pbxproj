@@ -12,11 +12,12 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		7B26195F47319932FD9E6AD0 /* Pods_BLListDataSource_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AAA77CA8E22FC1EFAAC88A /* Pods_BLListDataSource_Tests.framework */; };
+		FE75061FC52CE58683F29416 /* libPods-BLListDataSource_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DFD0DB3E177FD70C2EEF51 /* libPods-BLListDataSource_Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12A696EA151C2BCAE2F22325 /* Pods-BLListDataSource_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLListDataSource_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLListDataSource_Tests/Pods-BLListDataSource_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		16DFD0DB3E177FD70C2EEF51 /* libPods-BLListDataSource_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BLListDataSource_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -26,7 +27,6 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		78AAA77CA8E22FC1EFAAC88A /* Pods_BLListDataSource_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLListDataSource_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B002B33719BEA9BB5F0BEA7D /* BLListDataSource.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BLListDataSource.podspec; path = ../BLListDataSource.podspec; sourceTree = "<group>"; };
 		B26687EA8EC3DBD6EC25641D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C582CD50AAB35C3ADE5EF0E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				7B26195F47319932FD9E6AD0 /* Pods_BLListDataSource_Tests.framework in Frameworks */,
+				FE75061FC52CE58683F29416 /* libPods-BLListDataSource_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +74,7 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				78AAA77CA8E22FC1EFAAC88A /* Pods_BLListDataSource_Tests.framework */,
+				16DFD0DB3E177FD70C2EEF51 /* libPods-BLListDataSource_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

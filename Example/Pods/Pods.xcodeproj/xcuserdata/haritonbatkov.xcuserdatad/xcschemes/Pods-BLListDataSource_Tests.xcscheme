@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '31E8FE4E00D1EF5CFD215946'
-               BlueprintName = 'BLListDataSource'
+               BlueprintIdentifier = '5ED90605094150FDE9B38F0D'
+               BlueprintName = 'Pods-BLListDataSource_Tests'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libBLListDataSource.a'>
+               BuildableName = 'libPods-BLListDataSource_Tests.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

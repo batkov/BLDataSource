@@ -7,176 +7,188 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08958F7D01541431679C88FAD7EE37B2 /* BLDataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D89A64365D11D07AF3B7DE66EABFF4B /* BLDataObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14B1A06857F093372E25B9A20FA5D771 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		1EAABE86CCEA1C30BACB732E0EB14359 /* BLPaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D25DECE14C28E1A33F573B4647C905 /* BLPaging.m */; };
-		2024C16509F0E11AAC9BFF6B32FB013A /* BLReadableListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3536BF7B33DDF5978A1E6118CF8CAE /* BLReadableListDataSource.m */; };
-		2D14762D7A2252E86E5382EBC3AAF67B /* BLDataKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = F32806534C0913CDC0BC27196683494E /* BLDataKeys.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E6CD7A99A4B8A7E01AE363DB4B58F3F /* BLListDataSource+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = A74657D7D7213E3EF927A367CA74FDCD /* BLListDataSource+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		320E2AA5E3A72FEA1A0D9BE938F4CE0D /* BLListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 98DC8F3A58D459F01C441ECCACD35953 /* BLListDataSource.m */; };
-		329FCFBFAF19206E3B649EA02302B29A /* BLDataStructure+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = A665B36480B9F9519496B6DE93B0BAA6 /* BLDataStructure+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A9F524738A16F476F146EE0032EB154 /* BLBaseFetchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = A8B3DC226D2DA5CAA3BC67FCAF8C9D25 /* BLBaseFetchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F39474301449722BCCDF76EEDC5E339 /* Pods-BLListDataSource_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FB679267CACF3EEA480003625F5C6B6 /* Pods-BLListDataSource_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56FBBFE8BF0E2D100143100C29BEFFE7 /* BLDataSource+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F4B6CB8CE74C310EEDAB2FC86A43BBC /* BLDataSource+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		59850880C8F115BFCAD2812A471072E3 /* BLSimpleListFetchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 40B0CF85CEE6EDD28C73524EE326BDBB /* BLSimpleListFetchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6FF228D14D5D6EF692D6F91E8419EFC9 /* BLListDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 142BB259040EF301C1E4C7F3CC6325D0 /* BLListDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7962BF074D10DDE4A4C07E2CF24E1034 /* BLListDataSource-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B93D62A59FD064712527F4B4F95F54 /* BLListDataSource-dummy.m */; };
-		8744F0B9DA61387DC830BC8EE0A9F2C8 /* Pods-BLListDataSource_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E68B9B47F4AD0D637B12D329089372 /* Pods-BLListDataSource_Tests-dummy.m */; };
-		890DAD731583C39F66DE3097EFA56636 /* BLSimpleListFetchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 5463E7D9D4BE15B002C9899C31959862 /* BLSimpleListFetchResult.m */; };
-		9347EDF64F0C58A36DD28C2760AAF107 /* BLDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 955A08D6DDF5DBE3D2BB24A18DF6E9E5 /* BLDataSource.m */; };
-		98837B86069A08A0760843821F6B403B /* BLBaseFetchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8706F6DE08F91DBC027D4884D45424 /* BLBaseFetchResult.m */; };
-		9AC35AC0A619A9E375F92D56CEB8EE66 /* BLBaseFetchResult+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = BBB20F1F5929BD46C846F19DEC82687A /* BLBaseFetchResult+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7BCD57F1035234591E04436AA4C9DE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		AA75C5BDC1C1424027AF9651BAC53878 /* BLDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B1EABC155A9F0F1253814A8FEAFD2BA /* BLDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA935FD6BB299978FFF2867CA63E8F35 /* BLDataStructure.h in Headers */ = {isa = PBXBuildFile; fileRef = B31DF881832B899437E3BCF8CF321FCB /* BLDataStructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACC52D7FFA89E65049519BA1FFE1F07C /* BLListDataSource-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8DF8F7C254BF658218DAFC7D86E2987 /* BLListDataSource-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B8DB6124976CF4C9B35290AAB42161C5 /* BLDataStructure.m in Sources */ = {isa = PBXBuildFile; fileRef = 99977EC5D937DA6894F5CFB1271F0AC8 /* BLDataStructure.m */; };
-		C84D84E1BE0D3F4782BFD4E1FEF9E1DA /* BLPaging.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C3A502486AC63500036BCC47448602 /* BLPaging.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC8D4AAFE070689DBB47355D5D1D4E40 /* BLReadableListDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = CBF52B4CBA25D74A5E77AA4F353099A8 /* BLReadableListDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC855CF55BF69C51E2B1C72EE4BB2D06 /* BLBaseFetch.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D8F0F50885C3A2E3EC9FD9CF65377C1 /* BLBaseFetch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		061555870A80E156FB9FBACA442AAD3B /* BLListDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 38356FFF5E507C865D7E9E86BF6337EF /* BLListDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		122CED689F13FFC807684B0419FDBF43 /* BLDataStructure.h in Headers */ = {isa = PBXBuildFile; fileRef = D58FEAD25B1609AC17A2E5289759B3A1 /* BLDataStructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		141BFD00EBF14C33404867FFB96A2C0F /* BLDataStructure+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FA5A52CDC905F888FA5D995EEDBCBA1 /* BLDataStructure+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		163A72A1E81EEBA944B2FE1E0D2C8D60 /* BLPaging.m in Sources */ = {isa = PBXBuildFile; fileRef = F199963B556D75033DB8233318DA7FC9 /* BLPaging.m */; };
+		1663DBD0980E36821AB2312A4840735D /* BLSimpleListFetchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF868861EEE93F8D7327B3E3ED01E01 /* BLSimpleListFetchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		181C1F60C018857E614419C42ACD9E04 /* BLBaseFetchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A23CA63C0355C60277633F85EF09DBB /* BLBaseFetchResult.m */; };
+		46ECE020B88263AF561214B0152BC49C /* BLSimpleListFetchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E4235EDB19CD8E6F3A3A57B4F32DE430 /* BLSimpleListFetchResult.m */; };
+		58D70C07A43E34557FDD6F6C5AE6CC6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		69474ADE8F8799A167D25875F3E579E6 /* Pods-BLListDataSource_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B453EDE44571515FA640ABFA942321 /* Pods-BLListDataSource_Tests-dummy.m */; };
+		757E9831154F83A04DB9C9F4B092AF11 /* BLDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = C6117D55ED3518FBB09CEBD7E52AE933 /* BLDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E39CCEA8C437B59F91651A6E23FDE16 /* BLDataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D755A42B41B128414AE1A330ACDDFF9 /* BLDataObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95B6D10EF94E4F56EEC83B5D02C0BD8A /* BLBaseFetchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3820C9BE67919AFE7C7C0255C5C175 /* BLBaseFetchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AA3BEBD495C570254044A8E796BA4B3 /* BLDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 361B8CA3E8D435D3A007DBAB76074DB2 /* BLDataSource.m */; };
+		A07C51712685030F6BE9825B9E996E58 /* BLBaseFetch.h in Headers */ = {isa = PBXBuildFile; fileRef = D242F50329D6E46242448982A037A688 /* BLBaseFetch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD7254EA60B7A848C5E714431A99E3DD /* BLReadableListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAFDA28E0FFABD76226D7078ACE6F8A /* BLReadableListDataSource.m */; };
+		B2FB0673782858A80D20D04ED858B016 /* BLListDataSource-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C97EADE9400430EDD9D4E720CF868D01 /* BLListDataSource-dummy.m */; };
+		B64451B0EC5370FD8811FCA013405C64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		D5CFA9F20FA8917B44CA5C1DAE6BA5F5 /* BLDataStructure.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDB2012E5957CFB2739728E360C0D7E /* BLDataStructure.m */; };
+		D722E6F28E78461CC5B827DD03122983 /* BLListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F7684519965DE751EF78DD0285990D9D /* BLListDataSource.m */; };
+		DCCEDB37B5BCD921AD26CC1573B1EB46 /* BLPaging.h in Headers */ = {isa = PBXBuildFile; fileRef = D7ACCDCCBC9CCD90E2FE9A5F9F858A5A /* BLPaging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD69F7CE10955A48A08920CB82A9C8BE /* BLBaseFetchResult+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D52E4BE033C79574344E28DC6458E21 /* BLBaseFetchResult+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3E6365AF8C1C196AA3D14F924C77D8E /* BLDataSource+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 213FE8F40BB4EDFD5083D66F36AF4F0C /* BLDataSource+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F48B21DEA971CD2AAC908274B0C24CF1 /* BLListDataSource+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F553A78A07DD31E750862E1764F665C /* BLListDataSource+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF4C4F01C5E898BB1E4D03CC0237CD0E /* BLReadableListDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EC781452C32CB7D8B7A52F0142F4580 /* BLReadableListDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF64089FC619F40DABDD098D9B72EFB6 /* BLDataKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 817099ED6BFEAB33F1A4667060F10A3B /* BLDataKeys.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		368F87EFC733F11914CAE1FE51C3FD30 /* PBXContainerItemProxy */ = {
+		98FF9D1EAE885C6D1DB50BDD52F60490 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9F6D001CDF62925590E4CBB4FA43E7C1;
+			remoteGlobalIDString = FB3ED408940234ACCE781F3C8E23D8C4;
 			remoteInfo = BLListDataSource;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D8F0F50885C3A2E3EC9FD9CF65377C1 /* BLBaseFetch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLBaseFetch.h; sourceTree = "<group>"; };
-		142BB259040EF301C1E4C7F3CC6325D0 /* BLListDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLListDataSource.h; sourceTree = "<group>"; };
-		2F4B6CB8CE74C310EEDAB2FC86A43BBC /* BLDataSource+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLDataSource+Subclass.h"; sourceTree = "<group>"; };
-		301071B090E8700D409CB9CBD27DA61F /* Pods-BLListDataSource_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLListDataSource_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		319E8E7F704AC62719D8FB850FE9C837 /* BLListDataSource.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BLListDataSource.xcconfig; sourceTree = "<group>"; };
+		1A23CA63C0355C60277633F85EF09DBB /* BLBaseFetchResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLBaseFetchResult.m; sourceTree = "<group>"; };
+		213FE8F40BB4EDFD5083D66F36AF4F0C /* BLDataSource+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLDataSource+Subclass.h"; sourceTree = "<group>"; };
+		22B453EDE44571515FA640ABFA942321 /* Pods-BLListDataSource_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLListDataSource_Tests-dummy.m"; sourceTree = "<group>"; };
+		2EC781452C32CB7D8B7A52F0142F4580 /* BLReadableListDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLReadableListDataSource.h; sourceTree = "<group>"; };
+		2FA5A52CDC905F888FA5D995EEDBCBA1 /* BLDataStructure+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLDataStructure+Subclass.h"; sourceTree = "<group>"; };
+		361B8CA3E8D435D3A007DBAB76074DB2 /* BLDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLDataSource.m; sourceTree = "<group>"; };
+		38356FFF5E507C865D7E9E86BF6337EF /* BLListDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLListDataSource.h; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		40B0CF85CEE6EDD28C73524EE326BDBB /* BLSimpleListFetchResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLSimpleListFetchResult.h; sourceTree = "<group>"; };
-		50D25DECE14C28E1A33F573B4647C905 /* BLPaging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLPaging.m; sourceTree = "<group>"; };
-		5463E7D9D4BE15B002C9899C31959862 /* BLSimpleListFetchResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLSimpleListFetchResult.m; sourceTree = "<group>"; };
-		5E3536BF7B33DDF5978A1E6118CF8CAE /* BLReadableListDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLReadableListDataSource.m; sourceTree = "<group>"; };
-		5FB679267CACF3EEA480003625F5C6B6 /* Pods-BLListDataSource_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLListDataSource_Tests-umbrella.h"; sourceTree = "<group>"; };
-		705AB64374D0CE1FFCB5C332AE128150 /* Pods-BLListDataSource_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BLListDataSource_Tests.modulemap"; sourceTree = "<group>"; };
-		74E68B9B47F4AD0D637B12D329089372 /* Pods-BLListDataSource_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLListDataSource_Tests-dummy.m"; sourceTree = "<group>"; };
-		83804EE47EF9F1AD058B8366FD8EC7F4 /* BLListDataSource.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BLListDataSource.modulemap; sourceTree = "<group>"; };
-		87E594641EFE4347D44F1BB0435BE6F3 /* Pods_BLListDataSource_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLListDataSource_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B1EABC155A9F0F1253814A8FEAFD2BA /* BLDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLDataSource.h; sourceTree = "<group>"; };
-		8D89A64365D11D07AF3B7DE66EABFF4B /* BLDataObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLDataObject.h; sourceTree = "<group>"; };
-		955A08D6DDF5DBE3D2BB24A18DF6E9E5 /* BLDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLDataSource.m; sourceTree = "<group>"; };
-		98DC8F3A58D459F01C441ECCACD35953 /* BLListDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLListDataSource.m; sourceTree = "<group>"; };
-		99977EC5D937DA6894F5CFB1271F0AC8 /* BLDataStructure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLDataStructure.m; sourceTree = "<group>"; };
-		9F28FDCF4D986344EFABFE794839AD48 /* Pods-BLListDataSource_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLListDataSource_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A0B93D62A59FD064712527F4B4F95F54 /* BLListDataSource-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BLListDataSource-dummy.m"; sourceTree = "<group>"; };
-		A665B36480B9F9519496B6DE93B0BAA6 /* BLDataStructure+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLDataStructure+Subclass.h"; sourceTree = "<group>"; };
-		A74657D7D7213E3EF927A367CA74FDCD /* BLListDataSource+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLListDataSource+Subclass.h"; sourceTree = "<group>"; };
-		A8B3DC226D2DA5CAA3BC67FCAF8C9D25 /* BLBaseFetchResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLBaseFetchResult.h; sourceTree = "<group>"; };
-		A8C3A502486AC63500036BCC47448602 /* BLPaging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLPaging.h; sourceTree = "<group>"; };
-		B31DF881832B899437E3BCF8CF321FCB /* BLDataStructure.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLDataStructure.h; sourceTree = "<group>"; };
-		B40AA3B32D4C328EB47AB3241D1A9C35 /* Pods-BLListDataSource_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLListDataSource_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4CF868861EEE93F8D7327B3E3ED01E01 /* BLSimpleListFetchResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLSimpleListFetchResult.h; sourceTree = "<group>"; };
+		4D487C4305382BD6270917ED4AE24E0E /* libBLListDataSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBLListDataSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F553A78A07DD31E750862E1764F665C /* BLListDataSource+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLListDataSource+Subclass.h"; sourceTree = "<group>"; };
+		5D52E4BE033C79574344E28DC6458E21 /* BLBaseFetchResult+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLBaseFetchResult+Subclass.h"; sourceTree = "<group>"; };
+		5EABDA7272AB19D03783A86FBC7950B5 /* Pods-BLListDataSource_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLListDataSource_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		76713CB16A843EF29B97418055D815AE /* Pods-BLListDataSource_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLListDataSource_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		817099ED6BFEAB33F1A4667060F10A3B /* BLDataKeys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLDataKeys.h; sourceTree = "<group>"; };
+		90F91F62011520DBED2CFA49D9BDDF23 /* BLListDataSource.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BLListDataSource.xcconfig; sourceTree = "<group>"; };
+		9115668662DEBC2A1A39AB2A35B42F1B /* libPods-BLListDataSource_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BLListDataSource_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		911C7D49796C42A4C21B92909692E200 /* Pods-BLListDataSource_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLListDataSource_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		95647AFA5E4A096B742768C1D4F68123 /* Pods-BLListDataSource_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLListDataSource_Tests-resources.sh"; sourceTree = "<group>"; };
+		9AAFDA28E0FFABD76226D7078ACE6F8A /* BLReadableListDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLReadableListDataSource.m; sourceTree = "<group>"; };
+		9D755A42B41B128414AE1A330ACDDFF9 /* BLDataObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLDataObject.h; sourceTree = "<group>"; };
+		AB3820C9BE67919AFE7C7C0255C5C175 /* BLBaseFetchResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLBaseFetchResult.h; sourceTree = "<group>"; };
+		B1C552E0849B7A24B072142F62B7BF67 /* BLListDataSource-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLListDataSource-prefix.pch"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BB8706F6DE08F91DBC027D4884D45424 /* BLBaseFetchResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLBaseFetchResult.m; sourceTree = "<group>"; };
-		BBB20F1F5929BD46C846F19DEC82687A /* BLBaseFetchResult+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLBaseFetchResult+Subclass.h"; sourceTree = "<group>"; };
-		BC134847F7AB360C35DF8107E406F95F /* BLListDataSource-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLListDataSource-prefix.pch"; sourceTree = "<group>"; };
-		CBF52B4CBA25D74A5E77AA4F353099A8 /* BLReadableListDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLReadableListDataSource.h; sourceTree = "<group>"; };
-		CFF677A5807763EA7414B2061B638D2F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D42A44C2F17701B3E8067BBE919713CF /* BLListDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BLListDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB17A12536660DB9452F000C58AD0C60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE0117E8645524B3DB127878287E8C43 /* Pods-BLListDataSource_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLListDataSource_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E1A839B20CEAACBA7C030BBA2A1A8A79 /* Pods-BLListDataSource_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLListDataSource_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		E8DF8F7C254BF658218DAFC7D86E2987 /* BLListDataSource-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLListDataSource-umbrella.h"; sourceTree = "<group>"; };
-		F32806534C0913CDC0BC27196683494E /* BLDataKeys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLDataKeys.h; sourceTree = "<group>"; };
-		FECC8BE0126A6ACBBA79535DD38E8D65 /* Pods-BLListDataSource_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLListDataSource_Tests-resources.sh"; sourceTree = "<group>"; };
+		C0CF21D2940729C4F75E5E5F58FED0F5 /* Pods-BLListDataSource_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLListDataSource_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C6117D55ED3518FBB09CEBD7E52AE933 /* BLDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLDataSource.h; sourceTree = "<group>"; };
+		C97EADE9400430EDD9D4E720CF868D01 /* BLListDataSource-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BLListDataSource-dummy.m"; sourceTree = "<group>"; };
+		D242F50329D6E46242448982A037A688 /* BLBaseFetch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLBaseFetch.h; sourceTree = "<group>"; };
+		D3512302D5E87C441E7F6ED2D08BF120 /* Pods-BLListDataSource_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLListDataSource_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D58FEAD25B1609AC17A2E5289759B3A1 /* BLDataStructure.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLDataStructure.h; sourceTree = "<group>"; };
+		D7ACCDCCBC9CCD90E2FE9A5F9F858A5A /* BLPaging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLPaging.h; sourceTree = "<group>"; };
+		E4235EDB19CD8E6F3A3A57B4F32DE430 /* BLSimpleListFetchResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLSimpleListFetchResult.m; sourceTree = "<group>"; };
+		EFDB2012E5957CFB2739728E360C0D7E /* BLDataStructure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLDataStructure.m; sourceTree = "<group>"; };
+		F199963B556D75033DB8233318DA7FC9 /* BLPaging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLPaging.m; sourceTree = "<group>"; };
+		F7684519965DE751EF78DD0285990D9D /* BLListDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLListDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2E7D517662F3B083401433EA078ED357 /* Frameworks */ = {
+		025762F2049C22700391AD58D9EB3820 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14B1A06857F093372E25B9A20FA5D771 /* Foundation.framework in Frameworks */,
+				B64451B0EC5370FD8811FCA013405C64 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6AE5DD1F72C7104DABF760E723D058E1 /* Frameworks */ = {
+		6CBB788739EC1CB2369C1F9A4F85DC95 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7BCD57F1035234591E04436AA4C9DE5 /* Foundation.framework in Frameworks */,
+				58D70C07A43E34557FDD6F6C5AE6CC6B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C4E54408993B9A1A242B174E6DCC5D6 /* Paging */ = {
+		044DFD235FB7E411ABB95F1068E1DC96 /* FetchResult */ = {
 			isa = PBXGroup;
 			children = (
-				A8C3A502486AC63500036BCC47448602 /* BLPaging.h */,
-				50D25DECE14C28E1A33F573B4647C905 /* BLPaging.m */,
+				AB3820C9BE67919AFE7C7C0255C5C175 /* BLBaseFetchResult.h */,
+				1A23CA63C0355C60277633F85EF09DBB /* BLBaseFetchResult.m */,
+				5D52E4BE033C79574344E28DC6458E21 /* BLBaseFetchResult+Subclass.h */,
+				4CF868861EEE93F8D7327B3E3ED01E01 /* BLSimpleListFetchResult.h */,
+				E4235EDB19CD8E6F3A3A57B4F32DE430 /* BLSimpleListFetchResult.m */,
 			);
-			path = Paging;
+			path = FetchResult;
 			sourceTree = "<group>";
 		};
-		13AC0D6FF8A23C298B9C66A542266D0B /* DataSource */ = {
+		1748C244555727AF413CDFA1D0C219B3 /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
-				8B1EABC155A9F0F1253814A8FEAFD2BA /* BLDataSource.h */,
-				955A08D6DDF5DBE3D2BB24A18DF6E9E5 /* BLDataSource.m */,
-				2F4B6CB8CE74C310EEDAB2FC86A43BBC /* BLDataSource+Subclass.h */,
-				142BB259040EF301C1E4C7F3CC6325D0 /* BLListDataSource.h */,
-				98DC8F3A58D459F01C441ECCACD35953 /* BLListDataSource.m */,
-				A74657D7D7213E3EF927A367CA74FDCD /* BLListDataSource+Subclass.h */,
-				CBF52B4CBA25D74A5E77AA4F353099A8 /* BLReadableListDataSource.h */,
-				5E3536BF7B33DDF5978A1E6118CF8CAE /* BLReadableListDataSource.m */,
+				D58FEAD25B1609AC17A2E5289759B3A1 /* BLDataStructure.h */,
+				EFDB2012E5957CFB2739728E360C0D7E /* BLDataStructure.m */,
+				2FA5A52CDC905F888FA5D995EEDBCBA1 /* BLDataStructure+Subclass.h */,
 			);
-			path = DataSource;
+			path = DataStructure;
 			sourceTree = "<group>";
 		};
-		38FFB1E4EB504A012F3A188F1646009B /* Pods-BLListDataSource_Tests */ = {
+		215A26DADAABDDF52CDB56035610B8D4 /* BLListDataSource */ = {
 			isa = PBXGroup;
 			children = (
-				CFF677A5807763EA7414B2061B638D2F /* Info.plist */,
-				705AB64374D0CE1FFCB5C332AE128150 /* Pods-BLListDataSource_Tests.modulemap */,
-				9F28FDCF4D986344EFABFE794839AD48 /* Pods-BLListDataSource_Tests-acknowledgements.markdown */,
-				301071B090E8700D409CB9CBD27DA61F /* Pods-BLListDataSource_Tests-acknowledgements.plist */,
-				74E68B9B47F4AD0D637B12D329089372 /* Pods-BLListDataSource_Tests-dummy.m */,
-				E1A839B20CEAACBA7C030BBA2A1A8A79 /* Pods-BLListDataSource_Tests-frameworks.sh */,
-				FECC8BE0126A6ACBBA79535DD38E8D65 /* Pods-BLListDataSource_Tests-resources.sh */,
-				5FB679267CACF3EEA480003625F5C6B6 /* Pods-BLListDataSource_Tests-umbrella.h */,
-				DE0117E8645524B3DB127878287E8C43 /* Pods-BLListDataSource_Tests.debug.xcconfig */,
-				B40AA3B32D4C328EB47AB3241D1A9C35 /* Pods-BLListDataSource_Tests.release.xcconfig */,
-			);
-			name = "Pods-BLListDataSource_Tests";
-			path = "Target Support Files/Pods-BLListDataSource_Tests";
-			sourceTree = "<group>";
-		};
-		45C9727FED4DC76C03F68B04E9DE7639 /* BLListDataSource */ = {
-			isa = PBXGroup;
-			children = (
-				C086F7FF04DAA8862F5AB56B84734553 /* Pod */,
-				A05856680E1DB1B423754BE10FA136D2 /* Support Files */,
+				8F5BDF8BE53E299074CE423022A207BF /* Pod */,
+				68981CF9486091DBFFE5D542602FDFC2 /* Support Files */,
 			);
 			name = BLListDataSource;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		4DB2DF1537938E232180C9D531D5BFCE /* Products */ = {
+		339B3A6D2B6EBB1A53B6EBCC90018E29 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D42A44C2F17701B3E8067BBE919713CF /* BLListDataSource.framework */,
-				87E594641EFE4347D44F1BB0435BE6F3 /* Pods_BLListDataSource_Tests.framework */,
+				817099ED6BFEAB33F1A4667060F10A3B /* BLDataKeys.h */,
+				9D755A42B41B128414AE1A330ACDDFF9 /* BLDataObject.h */,
+				6AE5DFF75E501764CCE8ACFDB97389C8 /* DataSource */,
+				1748C244555727AF413CDFA1D0C219B3 /* DataStructure */,
+				551E90ADA70301695D36BCD241159DFF /* Fetch */,
+				044DFD235FB7E411ABB95F1068E1DC96 /* FetchResult */,
+				95C455574B9114D2E964EB812733DF4C /* Paging */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3EA9C61B1491FE76A90943E25F59A766 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D487C4305382BD6270917ED4AE24E0E /* libBLListDataSource.a */,
+				9115668662DEBC2A1A39AB2A35B42F1B /* libPods-BLListDataSource_Tests.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5CF07180BE20D689B36F98B10F9494A9 /* Fetch */ = {
+		551E90ADA70301695D36BCD241159DFF /* Fetch */ = {
 			isa = PBXGroup;
 			children = (
-				0D8F0F50885C3A2E3EC9FD9CF65377C1 /* BLBaseFetch.h */,
+				D242F50329D6E46242448982A037A688 /* BLBaseFetch.h */,
 			);
 			path = Fetch;
+			sourceTree = "<group>";
+		};
+		68981CF9486091DBFFE5D542602FDFC2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				90F91F62011520DBED2CFA49D9BDDF23 /* BLListDataSource.xcconfig */,
+				C97EADE9400430EDD9D4E720CF868D01 /* BLListDataSource-dummy.m */,
+				B1C552E0849B7A24B072142F62B7BF67 /* BLListDataSource-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BLListDataSource";
+			sourceTree = "<group>";
+		};
+		6AE5DFF75E501764CCE8ACFDB97389C8 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				C6117D55ED3518FBB09CEBD7E52AE933 /* BLDataSource.h */,
+				361B8CA3E8D435D3A007DBAB76074DB2 /* BLDataSource.m */,
+				213FE8F40BB4EDFD5083D66F36AF4F0C /* BLDataSource+Subclass.h */,
+				38356FFF5E507C865D7E9E86BF6337EF /* BLListDataSource.h */,
+				F7684519965DE751EF78DD0285990D9D /* BLListDataSource.m */,
+				4F553A78A07DD31E750862E1764F665C /* BLListDataSource+Subclass.h */,
+				2EC781452C32CB7D8B7A52F0142F4580 /* BLReadableListDataSource.h */,
+				9AAFDA28E0FFABD76226D7078ACE6F8A /* BLReadableListDataSource.m */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -185,53 +197,41 @@
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				D6BFBA111E7EF78B599F6383C0F77EF0 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				4DB2DF1537938E232180C9D531D5BFCE /* Products */,
-				856EAD84FE6350624F8D8052FEDD66B1 /* Targets Support Files */,
+				3EA9C61B1491FE76A90943E25F59A766 /* Products */,
+				FBDD93742AF7F79CB124B726B7B4B271 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7F9A732FEC3ABFFAF1A924E848F33CF7 /* FetchResult */ = {
+		8F5BDF8BE53E299074CE423022A207BF /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				A8B3DC226D2DA5CAA3BC67FCAF8C9D25 /* BLBaseFetchResult.h */,
-				BB8706F6DE08F91DBC027D4884D45424 /* BLBaseFetchResult.m */,
-				BBB20F1F5929BD46C846F19DEC82687A /* BLBaseFetchResult+Subclass.h */,
-				40B0CF85CEE6EDD28C73524EE326BDBB /* BLSimpleListFetchResult.h */,
-				5463E7D9D4BE15B002C9899C31959862 /* BLSimpleListFetchResult.m */,
+				339B3A6D2B6EBB1A53B6EBCC90018E29 /* Classes */,
 			);
-			path = FetchResult;
+			path = Pod;
 			sourceTree = "<group>";
 		};
-		856EAD84FE6350624F8D8052FEDD66B1 /* Targets Support Files */ = {
+		95C455574B9114D2E964EB812733DF4C /* Paging */ = {
 			isa = PBXGroup;
 			children = (
-				38FFB1E4EB504A012F3A188F1646009B /* Pods-BLListDataSource_Tests */,
+				D7ACCDCCBC9CCD90E2FE9A5F9F858A5A /* BLPaging.h */,
+				F199963B556D75033DB8233318DA7FC9 /* BLPaging.m */,
 			);
-			name = "Targets Support Files";
+			path = Paging;
 			sourceTree = "<group>";
 		};
-		884DECA15DB050D8C19E8517DA996C84 /* DataStructure */ = {
+		BBE14F116D790563691155709204B992 /* Pods-BLListDataSource_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B31DF881832B899437E3BCF8CF321FCB /* BLDataStructure.h */,
-				99977EC5D937DA6894F5CFB1271F0AC8 /* BLDataStructure.m */,
-				A665B36480B9F9519496B6DE93B0BAA6 /* BLDataStructure+Subclass.h */,
+				C0CF21D2940729C4F75E5E5F58FED0F5 /* Pods-BLListDataSource_Tests-acknowledgements.markdown */,
+				911C7D49796C42A4C21B92909692E200 /* Pods-BLListDataSource_Tests-acknowledgements.plist */,
+				22B453EDE44571515FA640ABFA942321 /* Pods-BLListDataSource_Tests-dummy.m */,
+				76713CB16A843EF29B97418055D815AE /* Pods-BLListDataSource_Tests-frameworks.sh */,
+				95647AFA5E4A096B742768C1D4F68123 /* Pods-BLListDataSource_Tests-resources.sh */,
+				D3512302D5E87C441E7F6ED2D08BF120 /* Pods-BLListDataSource_Tests.debug.xcconfig */,
+				5EABDA7272AB19D03783A86FBC7950B5 /* Pods-BLListDataSource_Tests.release.xcconfig */,
 			);
-			path = DataStructure;
-			sourceTree = "<group>";
-		};
-		A05856680E1DB1B423754BE10FA136D2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				83804EE47EF9F1AD058B8366FD8EC7F4 /* BLListDataSource.modulemap */,
-				319E8E7F704AC62719D8FB850FE9C837 /* BLListDataSource.xcconfig */,
-				A0B93D62A59FD064712527F4B4F95F54 /* BLListDataSource-dummy.m */,
-				BC134847F7AB360C35DF8107E406F95F /* BLListDataSource-prefix.pch */,
-				E8DF8F7C254BF658218DAFC7D86E2987 /* BLListDataSource-umbrella.h */,
-				DB17A12536660DB9452F000C58AD0C60 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/BLListDataSource";
+			name = "Pods-BLListDataSource_Tests";
+			path = "Target Support Files/Pods-BLListDataSource_Tests";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -250,97 +250,73 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C086F7FF04DAA8862F5AB56B84734553 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				C5BC10708B1C9D50F07AAF6CFAC15FAB /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
-		C5BC10708B1C9D50F07AAF6CFAC15FAB /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				F32806534C0913CDC0BC27196683494E /* BLDataKeys.h */,
-				8D89A64365D11D07AF3B7DE66EABFF4B /* BLDataObject.h */,
-				13AC0D6FF8A23C298B9C66A542266D0B /* DataSource */,
-				884DECA15DB050D8C19E8517DA996C84 /* DataStructure */,
-				5CF07180BE20D689B36F98B10F9494A9 /* Fetch */,
-				7F9A732FEC3ABFFAF1A924E848F33CF7 /* FetchResult */,
-				0C4E54408993B9A1A242B174E6DCC5D6 /* Paging */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		D6BFBA111E7EF78B599F6383C0F77EF0 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				45C9727FED4DC76C03F68B04E9DE7639 /* BLListDataSource */,
+				215A26DADAABDDF52CDB56035610B8D4 /* BLListDataSource */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FBDD93742AF7F79CB124B726B7B4B271 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBE14F116D790563691155709204B992 /* Pods-BLListDataSource_Tests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1F7720724667E2900AE29EC89D825F2A /* Headers */ = {
+		0EC0F97BC45B2C2530E2D1F2813CFD07 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC855CF55BF69C51E2B1C72EE4BB2D06 /* BLBaseFetch.h in Headers */,
-				9AC35AC0A619A9E375F92D56CEB8EE66 /* BLBaseFetchResult+Subclass.h in Headers */,
-				4A9F524738A16F476F146EE0032EB154 /* BLBaseFetchResult.h in Headers */,
-				2D14762D7A2252E86E5382EBC3AAF67B /* BLDataKeys.h in Headers */,
-				08958F7D01541431679C88FAD7EE37B2 /* BLDataObject.h in Headers */,
-				56FBBFE8BF0E2D100143100C29BEFFE7 /* BLDataSource+Subclass.h in Headers */,
-				AA75C5BDC1C1424027AF9651BAC53878 /* BLDataSource.h in Headers */,
-				329FCFBFAF19206E3B649EA02302B29A /* BLDataStructure+Subclass.h in Headers */,
-				AA935FD6BB299978FFF2867CA63E8F35 /* BLDataStructure.h in Headers */,
-				2E6CD7A99A4B8A7E01AE363DB4B58F3F /* BLListDataSource+Subclass.h in Headers */,
-				ACC52D7FFA89E65049519BA1FFE1F07C /* BLListDataSource-umbrella.h in Headers */,
-				6FF228D14D5D6EF692D6F91E8419EFC9 /* BLListDataSource.h in Headers */,
-				C84D84E1BE0D3F4782BFD4E1FEF9E1DA /* BLPaging.h in Headers */,
-				EC8D4AAFE070689DBB47355D5D1D4E40 /* BLReadableListDataSource.h in Headers */,
-				59850880C8F115BFCAD2812A471072E3 /* BLSimpleListFetchResult.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B6CB17CFAE4FFB34CDFB91812094BE21 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4F39474301449722BCCDF76EEDC5E339 /* Pods-BLListDataSource_Tests-umbrella.h in Headers */,
+				A07C51712685030F6BE9825B9E996E58 /* BLBaseFetch.h in Headers */,
+				DD69F7CE10955A48A08920CB82A9C8BE /* BLBaseFetchResult+Subclass.h in Headers */,
+				95B6D10EF94E4F56EEC83B5D02C0BD8A /* BLBaseFetchResult.h in Headers */,
+				FF64089FC619F40DABDD098D9B72EFB6 /* BLDataKeys.h in Headers */,
+				7E39CCEA8C437B59F91651A6E23FDE16 /* BLDataObject.h in Headers */,
+				F3E6365AF8C1C196AA3D14F924C77D8E /* BLDataSource+Subclass.h in Headers */,
+				757E9831154F83A04DB9C9F4B092AF11 /* BLDataSource.h in Headers */,
+				141BFD00EBF14C33404867FFB96A2C0F /* BLDataStructure+Subclass.h in Headers */,
+				122CED689F13FFC807684B0419FDBF43 /* BLDataStructure.h in Headers */,
+				F48B21DEA971CD2AAC908274B0C24CF1 /* BLListDataSource+Subclass.h in Headers */,
+				061555870A80E156FB9FBACA442AAD3B /* BLListDataSource.h in Headers */,
+				DCCEDB37B5BCD921AD26CC1573B1EB46 /* BLPaging.h in Headers */,
+				FF4C4F01C5E898BB1E4D03CC0237CD0E /* BLReadableListDataSource.h in Headers */,
+				1663DBD0980E36821AB2312A4840735D /* BLSimpleListFetchResult.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		41FCEC6E3D07D2B0C9A2912B277579D8 /* Pods-BLListDataSource_Tests */ = {
+		6B7C577409DF1CF2D12EBFE7E8B7E7F3 /* Pods-BLListDataSource_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C8091C52D4F1F35A6469436C37917587 /* Build configuration list for PBXNativeTarget "Pods-BLListDataSource_Tests" */;
+			buildConfigurationList = 2CA0CFA5630576111D6557230EB22444 /* Build configuration list for PBXNativeTarget "Pods-BLListDataSource_Tests" */;
 			buildPhases = (
-				98B19FDC56384D5AFABDF2CBDEA68879 /* Sources */,
-				2E7D517662F3B083401433EA078ED357 /* Frameworks */,
-				B6CB17CFAE4FFB34CDFB91812094BE21 /* Headers */,
+				922B500946D3FBBBA042E9D2DA739B64 /* Sources */,
+				025762F2049C22700391AD58D9EB3820 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C888862C417908F223E1AE2F5E681B50 /* PBXTargetDependency */,
+				1AB96F6DAA81E1086418CB41869D4C76 /* PBXTargetDependency */,
 			);
 			name = "Pods-BLListDataSource_Tests";
 			productName = "Pods-BLListDataSource_Tests";
-			productReference = 87E594641EFE4347D44F1BB0435BE6F3 /* Pods_BLListDataSource_Tests.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 9115668662DEBC2A1A39AB2A35B42F1B /* libPods-BLListDataSource_Tests.a */;
+			productType = "com.apple.product-type.library.static";
 		};
-		9F6D001CDF62925590E4CBB4FA43E7C1 /* BLListDataSource */ = {
+		FB3ED408940234ACCE781F3C8E23D8C4 /* BLListDataSource */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6F28559F6574FBFD95F62B96C857BC7 /* Build configuration list for PBXNativeTarget "BLListDataSource" */;
+			buildConfigurationList = 19711364C12496C05AED28CEC32F7624 /* Build configuration list for PBXNativeTarget "BLListDataSource" */;
 			buildPhases = (
-				BD1CADECB142AD052BA961299CC97220 /* Sources */,
-				6AE5DD1F72C7104DABF760E723D058E1 /* Frameworks */,
-				1F7720724667E2900AE29EC89D825F2A /* Headers */,
+				AF3A45D2AF930EC1890E9E44C7326799 /* Sources */,
+				6CBB788739EC1CB2369C1F9A4F85DC95 /* Frameworks */,
+				0EC0F97BC45B2C2530E2D1F2813CFD07 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -348,8 +324,8 @@
 			);
 			name = BLListDataSource;
 			productName = BLListDataSource;
-			productReference = D42A44C2F17701B3E8067BBE919713CF /* BLListDataSource.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 4D487C4305382BD6270917ED4AE24E0E /* libBLListDataSource.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -368,48 +344,48 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4DB2DF1537938E232180C9D531D5BFCE /* Products */;
+			productRefGroup = 3EA9C61B1491FE76A90943E25F59A766 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9F6D001CDF62925590E4CBB4FA43E7C1 /* BLListDataSource */,
-				41FCEC6E3D07D2B0C9A2912B277579D8 /* Pods-BLListDataSource_Tests */,
+				FB3ED408940234ACCE781F3C8E23D8C4 /* BLListDataSource */,
+				6B7C577409DF1CF2D12EBFE7E8B7E7F3 /* Pods-BLListDataSource_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		98B19FDC56384D5AFABDF2CBDEA68879 /* Sources */ = {
+		922B500946D3FBBBA042E9D2DA739B64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8744F0B9DA61387DC830BC8EE0A9F2C8 /* Pods-BLListDataSource_Tests-dummy.m in Sources */,
+				69474ADE8F8799A167D25875F3E579E6 /* Pods-BLListDataSource_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD1CADECB142AD052BA961299CC97220 /* Sources */ = {
+		AF3A45D2AF930EC1890E9E44C7326799 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98837B86069A08A0760843821F6B403B /* BLBaseFetchResult.m in Sources */,
-				9347EDF64F0C58A36DD28C2760AAF107 /* BLDataSource.m in Sources */,
-				B8DB6124976CF4C9B35290AAB42161C5 /* BLDataStructure.m in Sources */,
-				7962BF074D10DDE4A4C07E2CF24E1034 /* BLListDataSource-dummy.m in Sources */,
-				320E2AA5E3A72FEA1A0D9BE938F4CE0D /* BLListDataSource.m in Sources */,
-				1EAABE86CCEA1C30BACB732E0EB14359 /* BLPaging.m in Sources */,
-				2024C16509F0E11AAC9BFF6B32FB013A /* BLReadableListDataSource.m in Sources */,
-				890DAD731583C39F66DE3097EFA56636 /* BLSimpleListFetchResult.m in Sources */,
+				181C1F60C018857E614419C42ACD9E04 /* BLBaseFetchResult.m in Sources */,
+				9AA3BEBD495C570254044A8E796BA4B3 /* BLDataSource.m in Sources */,
+				D5CFA9F20FA8917B44CA5C1DAE6BA5F5 /* BLDataStructure.m in Sources */,
+				B2FB0673782858A80D20D04ED858B016 /* BLListDataSource-dummy.m in Sources */,
+				D722E6F28E78461CC5B827DD03122983 /* BLListDataSource.m in Sources */,
+				163A72A1E81EEBA944B2FE1E0D2C8D60 /* BLPaging.m in Sources */,
+				AD7254EA60B7A848C5E714431A99E3DD /* BLReadableListDataSource.m in Sources */,
+				46ECE020B88263AF561214B0152BC49C /* BLSimpleListFetchResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C888862C417908F223E1AE2F5E681B50 /* PBXTargetDependency */ = {
+		1AB96F6DAA81E1086418CB41869D4C76 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BLListDataSource;
-			target = 9F6D001CDF62925590E4CBB4FA43E7C1 /* BLListDataSource */;
-			targetProxy = 368F87EFC733F11914CAE1FE51C3FD30 /* PBXContainerItemProxy */;
+			target = FB3ED408940234ACCE781F3C8E23D8C4 /* BLListDataSource */;
+			targetProxy = 98FF9D1EAE885C6D1DB50BDD52F60490 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -448,89 +424,40 @@
 			};
 			name = Release;
 		};
-		2408BF04B20137525DB13A32C71E04B7 /* Debug */ = {
+		49EB33EC19134FFB28CFFBA29372FBBA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 319E8E7F704AC62719D8FB850FE9C837 /* BLListDataSource.xcconfig */;
+			baseConfigurationReference = 90F91F62011520DBED2CFA49D9BDDF23 /* BLListDataSource.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/BLListDataSource/BLListDataSource-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BLListDataSource/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BLListDataSource/BLListDataSource.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = BLListDataSource;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		44ACD344A0A63A979CEC022F43F62169 /* Release */ = {
+		7BA135613496102747177207C905EE35 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B40AA3B32D4C328EB47AB3241D1A9C35 /* Pods-BLListDataSource_Tests.release.xcconfig */;
+			baseConfigurationReference = D3512302D5E87C441E7F6ED2D08BF120 /* Pods-BLListDataSource_Tests.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-BLListDataSource_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BLListDataSource_Tests/Pods-BLListDataSource_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_BLListDataSource_Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
-		};
-		4BCD71BC1866E51B9874B83087736777 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 319E8E7F704AC62719D8FB850FE9C837 /* BLListDataSource.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BLListDataSource/BLListDataSource-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BLListDataSource/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BLListDataSource/BLListDataSource.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = BLListDataSource;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
+			name = Debug;
 		};
 		B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -571,62 +498,67 @@
 			};
 			name = Debug;
 		};
-		F3A81348C8CAC3091EA21235090A43A3 /* Debug */ = {
+		B535159E8423E01CB70077800FD2E072 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE0117E8645524B3DB127878287E8C43 /* Pods-BLListDataSource_Tests.debug.xcconfig */;
+			baseConfigurationReference = 90F91F62011520DBED2CFA49D9BDDF23 /* BLListDataSource.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-BLListDataSource_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				GCC_PREFIX_HEADER = "Target Support Files/BLListDataSource/BLListDataSource-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D5DB0A056EE9F63DE88ED285528DBECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EABDA7272AB19D03783A86FBC7950B5 /* Pods-BLListDataSource_Tests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BLListDataSource_Tests/Pods-BLListDataSource_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_BLListDataSource_Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		19711364C12496C05AED28CEC32F7624 /* Build configuration list for PBXNativeTarget "BLListDataSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49EB33EC19134FFB28CFFBA29372FBBA /* Debug */,
+				B535159E8423E01CB70077800FD2E072 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CA0CFA5630576111D6557230EB22444 /* Build configuration list for PBXNativeTarget "Pods-BLListDataSource_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BA135613496102747177207C905EE35 /* Debug */,
+				D5DB0A056EE9F63DE88ED285528DBECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */,
 				052A17875CB827423D627183396CEB60 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6F28559F6574FBFD95F62B96C857BC7 /* Build configuration list for PBXNativeTarget "BLListDataSource" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2408BF04B20137525DB13A32C71E04B7 /* Debug */,
-				4BCD71BC1866E51B9874B83087736777 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C8091C52D4F1F35A6469436C37917587 /* Build configuration list for PBXNativeTarget "Pods-BLListDataSource_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F3A81348C8CAC3091EA21235090A43A3 /* Debug */,
-				44ACD344A0A63A979CEC022F43F62169 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
