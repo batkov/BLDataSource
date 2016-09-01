@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BLListDataSource"
-  s.version          = "0.9.8"
+  s.version          = "0.9.9"
   s.summary          = "BLListDataSource is a simple and powerfull method of fetching and maintainig list data from internet."
 
 # This description is used to generate tags and improve search results.
