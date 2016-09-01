@@ -29,6 +29,7 @@
 
 typedef NS_ENUM(NSUInteger, BLDataSorting) {
     BLDataSortingUpdatedAt,
+    BLDataSortingUpdatedAtReverse,
     BLDataSortingCreatedAt,
     BLDataSortingCreatedAtReverse,
     BLDataSortingSortingCustom,

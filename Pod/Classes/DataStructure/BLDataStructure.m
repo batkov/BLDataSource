@@ -144,6 +144,10 @@
             return [newItems sortedArrayUsingComparator:^NSComparisonResult(id<BLDataObject>  _Nonnull obj1, id<BLDataObject> _Nonnull obj2) {
                 return [obj2.updatedAt compare:obj1.updatedAt];
             }];
+        case BLDataSortingUpdatedAtReverse:
+            return [newItems sortedArrayUsingComparator:^NSComparisonResult(id<BLDataObject>  _Nonnull obj1, id<BLDataObject> _Nonnull obj2) {
+                return [obj1.updatedAt compare:obj2.updatedAt];
+            }];
         case BLDataSortingCreatedAt:
             return [newItems sortedArrayUsingComparator:^NSComparisonResult(id<BLDataObject>  _Nonnull obj1, id<BLDataObject> _Nonnull obj2) {
                 return [obj1.createdAt compare:obj2.createdAt];
