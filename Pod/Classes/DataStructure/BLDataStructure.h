@@ -45,7 +45,7 @@ typedef NSArray<id<BLDataObject>>*(^BLCustomSortingBlock)(NSArray<id<BLDataObjec
 
 - (void) processFetchResult:(BLBaseFetchResult *) fetchResult;
 
-@property (nonatomic, assign, readonly) BLDataSorting sorting; // BLDataStructureSortingUpdatedAt by default
+@property (nonatomic, assign, readonly) BLDataSorting sorting; // BLDataSortingCreatedAt by default
 @property (nonatomic, copy, readonly) BLCustomSortingBlock customSortingBlock;
 @property (nonatomic, copy) dispatch_block_t changedBlock;
 #pragma mark - Table View conviniency methods

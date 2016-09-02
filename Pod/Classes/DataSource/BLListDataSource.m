@@ -212,6 +212,12 @@
         NSAssert([dataStructure isKindOfClass:[BLDataStructure class]], @"Wrong class or nil");
         return dataStructure;
     }
+    if (self.dataSortingBlock) {
+        BLDataSorting sorting = self.dataSortingBlock(fetchResult);
+        return [BLDataStructure dataStructureWithFetchResult:fetchResult
+                                                     sorting:sorting
+                                                       block:self.customSortingBlock];
+    }
     return [BLDataStructure dataStructureWithFetchResult:fetchResult];
 }
 

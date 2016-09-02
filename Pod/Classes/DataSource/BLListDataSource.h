@@ -30,7 +30,7 @@
 
 typedef BLBaseFetchResult*(^BLFetchResultBlock)(id object, BOOL isLocal);
 typedef BLDataStructure*(^BLDataStructureBlock)(BLBaseFetchResult * fetchResult);
-typedef BLDataSorting*(^BLDataSortingBlock)(BLBaseFetchResult * fetchResult);
+typedef BLDataSorting(^BLDataSortingBlock)(BLBaseFetchResult * fetchResult);
 typedef void (^BLItemsStoredBlock)(NSError * error);
 
 @interface BLListDataSource : BLDataSource
