@@ -35,6 +35,7 @@
     NSAssert(fetch, @"You need to provide fetch");
     if (self = [super init]) {
         self.pagingEnabled = YES;
+        self.autoAdvance = NO;
         self.fetch = fetch;
         self.fetchResultBlock = ^(id object, BOOL isLocal) {
             if (isLocal) {
@@ -157,6 +158,19 @@
     [self processFetchResult:fetchResult];
     [self updatePagingFlagsForListSize];
     [self contentLoaded:nil];
+    [self loadNextPageIfAutoAdvance];
+}
+
+- (void) loadNextPageIfAutoAdvance {
+    if (!self.autoAdvance) {
+        return;
+    }
+    if (!self.pagingEnabled) {
+        return;
+    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self loadNextPageIfNeeded];
+    });
 }
 
 - (void) startContentLoading {

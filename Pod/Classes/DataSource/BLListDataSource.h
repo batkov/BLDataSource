@@ -50,6 +50,13 @@ typedef void (^BLItemsStoredBlock)(NSError * error);
 
 @property (nonatomic, copy) BLItemsStoredBlock storedBlock; // Called after all objects stored
 
+
+/**
+ If YES, will start loading next page right after previous page completed loading.
+ Default is NO.
+ */
+@property (assign, nonatomic) BOOL autoAdvance;
+
 - (instancetype) init NS_UNAVAILABLE;
 - (instancetype) new NS_UNAVAILABLE;
 - (instancetype) initWithFetch:(id<BLBaseFetch>) fetch NS_DESIGNATED_INITIALIZER;
