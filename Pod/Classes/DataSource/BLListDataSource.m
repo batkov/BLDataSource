@@ -221,8 +221,8 @@
 }
 
 - (BLDataStructure *) dataStructureFromFetchResult:(BLBaseFetchResult *) fetchResult {
-    if (self.dataStrucutreBlock) {
-        BLDataStructure * dataStructure = self.dataStrucutreBlock(fetchResult);
+    if (self.dataStructreBlock) {
+        BLDataStructure * dataStructure = self.dataStructreBlock(fetchResult);
         NSAssert([dataStructure isKindOfClass:[BLDataStructure class]], @"Wrong class or nil");
         return dataStructure;
     }
