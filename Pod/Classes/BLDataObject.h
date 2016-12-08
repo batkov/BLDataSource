@@ -32,5 +32,6 @@
 
 @optional
 - (id) objectToStore;
+- (NSArray *) objectsToStore;
 
 @end
