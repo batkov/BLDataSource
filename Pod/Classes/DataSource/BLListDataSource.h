@@ -28,6 +28,11 @@
 #import "BLPaging.h"
 #import "BLBaseFetchResult.h"
 
+typedef NS_ENUM(NSInteger, BLOfflineStoragePolicy) {
+    BLOfflineFirstPage,
+    BLOfflineAllData,
+};
+
 typedef BLBaseFetchResult*(^BLFetchResultBlock)(id object, BOOL isLocal);
 typedef BLDataStructure*(^BLDataStructureBlock)(BLBaseFetchResult * fetchResult);
 typedef BLDataSorting(^BLDataSortingBlock)(BLBaseFetchResult * fetchResult);
@@ -41,6 +46,9 @@ typedef void (^BLItemsStoredBlock)(NSError * error);
 @property (nonatomic, strong, readonly) BLPaging * paging;
 @property (nonatomic, assign, readonly) BOOL canLoadMore;
 @property (nonatomic, assign) NSInteger defaultPageSize;
+
+// BLOfflineFirstPage by default
+@property (nonatomic, assign) BLOfflineStoragePolicy storagePolicy;
 
 @property (nonatomic, copy) dispatch_block_t itemsChangedBlock;
 @property (nonatomic, copy) BLFetchResultBlock fetchResultBlock; // Will return results from BLSimpleListFetchResult by default

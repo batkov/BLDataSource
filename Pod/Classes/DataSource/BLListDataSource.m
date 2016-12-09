@@ -148,18 +148,27 @@
 - (void) itemsLoaded:(BLBaseFetchResult *) fetchResult {
     if ([self shouldClearList]) {
         self.dataStructure = nil;
-        __weak typeof(self) selff = self;
-        [self.fetch storeItems:fetchResult callback:^(BOOL result, NSError * _Nullable error) {
-            if (selff.storedBlock) {
-                self.storedBlock(error);
-            }
-        }];
+        if (self.storagePolicy == BLOfflineFirstPage) {
+            [self storeItems:fetchResult];
+        }
     }
     
+    if (self.storagePolicy == BLOfflineAllData) {
+        [self storeItems:fetchResult];
+    }
     [self processFetchResult:fetchResult];
     [self updatePagingFlagsForListSize];
     [self contentLoaded:nil];
     [self loadNextPageIfAutoAdvance];
+}
+
+- (void) storeItems:(BLBaseFetchResult *) fetchResult {
+    __weak typeof(self) selff = self;
+    [self.fetch storeItems:fetchResult callback:^(BOOL result, NSError * _Nullable error) {
+        if (selff.storedBlock) {
+            self.storedBlock(error);
+        }
+    }];
 }
 
 - (void) loadNextPageIfAutoAdvance {
