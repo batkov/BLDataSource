@@ -26,7 +26,7 @@
 #import "BLSimpleListFetchResult.h"
 #import "BLListDataSource+Subclass.h"
 
-#define kBLParseListDefaultPagingLimit 15
+#define kBLParseListDefaultPagingLimit 25
 
 
 @implementation BLListDataSource
@@ -43,6 +43,7 @@
             }
             return [BLSimpleListFetchResult fetchResultForObject:object];
         };
+        self.defaultPageSize = kBLParseListDefaultPagingLimit;
     }
     return self;
 }
@@ -54,7 +55,7 @@
     if (!_paging) {
         BLMutablePaging * paging = [BLMutablePaging new];
         paging.skip = 0;
-        paging.limit = kBLParseListDefaultPagingLimit;
+        paging.limit = self.defaultPageSize;
         _paging = [BLPaging pagingFromPaging:paging];
     }
     return _paging;
@@ -248,6 +249,17 @@
         return self.fetchResultBlock(object, YES);
     }
     return nil; // For subclassing
+}
+
+#pragma mark -
+-(NSString *)description {
+    NSString * fetchMode = @"OnlineAndOffline";
+    if (self.fetchMode == BLFetchModeOnlineOnly) {
+        fetchMode = @"Online";
+    } else if (self.fetchMode == BLFetchModeOfflineOnly) {
+        fetchMode = @"Offline";
+    }
+    return [NSString stringWithFormat:@"%@\nMode: %@\nFetch: %@\nDataStructure: %@\nPaging: %@", [super description], fetchMode, [self.fetch description], [self.dataStructure description], [self.paging description]];
 }
 
 @end

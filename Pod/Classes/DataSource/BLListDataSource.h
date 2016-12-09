@@ -40,6 +40,7 @@ typedef void (^BLItemsStoredBlock)(NSError * error);
 @property (nonatomic, assign) BOOL pagingEnabled; // YES by default
 @property (nonatomic, strong, readonly) BLPaging * paging;
 @property (nonatomic, assign, readonly) BOOL canLoadMore;
+@property (nonatomic, assign) NSInteger defaultPageSize;
 
 @property (nonatomic, copy) dispatch_block_t itemsChangedBlock;
 @property (nonatomic, copy) BLFetchResultBlock fetchResultBlock; // Will return results from BLSimpleListFetchResult by default
