@@ -185,7 +185,9 @@
 
 - (void) startContentLoading {
     [super startContentLoading];
-    [self fetchOfflineData:NO];
+    if (self.fetchMode != BLFetchModeOfflineOnly) {
+        [self fetchOfflineData:NO];
+    }
     [self runRequest];
 }
 
