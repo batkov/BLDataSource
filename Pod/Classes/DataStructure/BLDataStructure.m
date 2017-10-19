@@ -47,10 +47,20 @@
 }
 
 - (void) processFetchResult:(BLBaseFetchResult *) fetchResult {
+    if (!self.metadata) {
+        self.metadata = [NSMutableDictionary dictionary];
+    }
     for (int i = 0; i < [[fetchResult sections] count]; i++) {
         [self putSection:[self processItems:[fetchResult sections][i]
                                   inSection:i]
                  section:i];
+        NSNumber * key = @(i);
+        id sectionMetadata = fetchResult.sectionsMetadata[key];
+        if (sectionMetadata) {
+            self.metadata[key] = sectionMetadata;
+        } else {
+            [self.metadata removeObjectForKey:key];
+        }
     }
     if (self.changedBlock) {
         self.changedBlock();

@@ -38,6 +38,8 @@
 - (BLDataStructure *__nonnull) dataStructureFromFetchResult:(BLBaseFetchResult *__nonnull) fetchResult;
 - (BLBaseFetchResult * __nonnull) createFetchResultFor:(id __nullable)object;
 - (BLBaseFetchResult * __nonnull) createFetchResultForLocalObject:(id __nullable)object;
+
+// Override this method to customize fetch result processing
 - (void) processFetchResult:(BLBaseFetchResult *__nonnull) fetchResult;
 
 - (void) updatePagingFlagsForListSize;
