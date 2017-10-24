@@ -87,6 +87,9 @@
 }
 
 - (BOOL) shouldClearList {
+    if (!self.pagingEnabled) {
+        return YES;
+    }
     return self.paging && self.paging.skip == 0;
 }
 
