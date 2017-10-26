@@ -7,6 +7,7 @@
 
 #import "BLFetchDataSource.h"
 #import "BLDataSource+Subclass.h"
+#import "BLSimpleListFetchResult.h"
 
 @interface BLFetchDataSource ()
 
@@ -23,6 +24,12 @@
         self.defaultFetchDelay = 15;
         self.defaultErrorFetchDelay = 15;
         self.storeFetchedObject = NO;
+        self.fetchResultBlock = ^(id object, BOOL isLocal) {
+            if (isLocal) {
+                return [BLSimpleListFetchResult fetchResultForLocalObject:object];
+            }
+            return [BLSimpleListFetchResult fetchResultForObject:object];
+        };
     }
     return self;
 }
@@ -119,18 +126,6 @@
     if (self.state == BLDataSourceStateLoadContent)
         return NO;
     if (self.state == BLDataSourceStateRefreshContent)
-        return NO;
-    [self startContentRefreshing];
-    return YES;
-}
-
-- (BOOL) loadMoreIfPossible {
-    if (self.state == BLDataSourceStateLoadContent)
-        return NO;
-    if (self.state == BLDataSourceStateRefreshContent)
-        return NO;
-    
-    if (self.state != BLDataSourceStateContent)
         return NO;
     [self startContentRefreshing];
     return YES;
