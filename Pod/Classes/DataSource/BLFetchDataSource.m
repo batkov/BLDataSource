@@ -133,7 +133,7 @@
 
 - (void) processFetchResult:(BLBaseFetchResult *) fetchResult {
     id object = fetchResult.items;
-    if ([fetchResult.items count] == 0) {
+    if ([fetchResult.items count] == 1) {
         object = [fetchResult.items firstObject];
     }
     self.fetchedObject = object;
