@@ -25,6 +25,9 @@
 #import <Foundation/Foundation.h>
 #import "BLDataObject.h"
 
+@class BLBaseFetchResult;
+typedef BLBaseFetchResult*(^BLFetchResultBlock)(id object, BOOL isLocal);
+
 @interface BLBaseFetchResult : NSObject
 
 // Fetch result created from online data

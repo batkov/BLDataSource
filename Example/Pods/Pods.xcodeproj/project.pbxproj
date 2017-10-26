@@ -13,6 +13,8 @@
 		163A72A1E81EEBA944B2FE1E0D2C8D60 /* BLPaging.m in Sources */ = {isa = PBXBuildFile; fileRef = F199963B556D75033DB8233318DA7FC9 /* BLPaging.m */; };
 		1663DBD0980E36821AB2312A4840735D /* BLSimpleListFetchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF868861EEE93F8D7327B3E3ED01E01 /* BLSimpleListFetchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		181C1F60C018857E614419C42ACD9E04 /* BLBaseFetchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A23CA63C0355C60277633F85EF09DBB /* BLBaseFetchResult.m */; };
+		3DB68A431FA1E8410041065E /* BLFetchDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB68A411FA1E8410041065E /* BLFetchDataSource.h */; };
+		3DB68A441FA1E8410041065E /* BLFetchDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB68A421FA1E8410041065E /* BLFetchDataSource.m */; };
 		46ECE020B88263AF561214B0152BC49C /* BLSimpleListFetchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E4235EDB19CD8E6F3A3A57B4F32DE430 /* BLSimpleListFetchResult.m */; };
 		58D70C07A43E34557FDD6F6C5AE6CC6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		69474ADE8F8799A167D25875F3E579E6 /* Pods-BLListDataSource_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B453EDE44571515FA640ABFA942321 /* Pods-BLListDataSource_Tests-dummy.m */; };
@@ -52,6 +54,8 @@
 		2FA5A52CDC905F888FA5D995EEDBCBA1 /* BLDataStructure+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLDataStructure+Subclass.h"; sourceTree = "<group>"; };
 		361B8CA3E8D435D3A007DBAB76074DB2 /* BLDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLDataSource.m; sourceTree = "<group>"; };
 		38356FFF5E507C865D7E9E86BF6337EF /* BLListDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLListDataSource.h; sourceTree = "<group>"; };
+		3DB68A411FA1E8410041065E /* BLFetchDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLFetchDataSource.h; sourceTree = "<group>"; };
+		3DB68A421FA1E8410041065E /* BLFetchDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLFetchDataSource.m; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4CF868861EEE93F8D7327B3E3ED01E01 /* BLSimpleListFetchResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLSimpleListFetchResult.h; sourceTree = "<group>"; };
 		4D487C4305382BD6270917ED4AE24E0E /* libBLListDataSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBLListDataSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +191,8 @@
 				4F553A78A07DD31E750862E1764F665C /* BLListDataSource+Subclass.h */,
 				2EC781452C32CB7D8B7A52F0142F4580 /* BLReadableListDataSource.h */,
 				9AAFDA28E0FFABD76226D7078ACE6F8A /* BLReadableListDataSource.m */,
+				3DB68A411FA1E8410041065E /* BLFetchDataSource.h */,
+				3DB68A421FA1E8410041065E /* BLFetchDataSource.m */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 				122CED689F13FFC807684B0419FDBF43 /* BLDataStructure.h in Headers */,
 				F48B21DEA971CD2AAC908274B0C24CF1 /* BLListDataSource+Subclass.h in Headers */,
 				061555870A80E156FB9FBACA442AAD3B /* BLListDataSource.h in Headers */,
+				3DB68A431FA1E8410041065E /* BLFetchDataSource.h in Headers */,
 				DCCEDB37B5BCD921AD26CC1573B1EB46 /* BLPaging.h in Headers */,
 				FF4C4F01C5E898BB1E4D03CC0237CD0E /* BLReadableListDataSource.h in Headers */,
 				1663DBD0980E36821AB2312A4840735D /* BLSimpleListFetchResult.h in Headers */,
@@ -375,6 +382,7 @@
 				163A72A1E81EEBA944B2FE1E0D2C8D60 /* BLPaging.m in Sources */,
 				AD7254EA60B7A848C5E714431A99E3DD /* BLReadableListDataSource.m in Sources */,
 				46ECE020B88263AF561214B0152BC49C /* BLSimpleListFetchResult.m in Sources */,
+				3DB68A441FA1E8410041065E /* BLFetchDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

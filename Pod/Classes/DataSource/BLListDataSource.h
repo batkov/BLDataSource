@@ -32,8 +32,6 @@ typedef NS_ENUM(NSInteger, BLOfflineStoragePolicy) {
     BLOfflineFirstPage,
     BLOfflineAllData,
 };
-
-typedef BLBaseFetchResult*(^BLFetchResultBlock)(id object, BOOL isLocal);
 typedef BLDataStructure*(^BLDataStructureBlock)(BLBaseFetchResult * fetchResult);
 typedef BLDataSorting(^BLDataSortingBlock)(BLBaseFetchResult * fetchResult);
 typedef void (^BLItemsStoredBlock)(NSError * error);
