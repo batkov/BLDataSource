@@ -154,7 +154,7 @@
             return;
         case BLDataSourceStateError:
             delay = self.defaultErrorFetchDelay;
-            return;
+            break;
         default:
             break;
     }
