@@ -149,14 +149,16 @@
 }
 
 - (void) itemsLoaded:(BLBaseFetchResult *) fetchResult {
+    BOOL calledForStore = NO;
     if ([self shouldClearList]) {
         self.dataStructure = nil;
         if (self.storagePolicy == BLOfflineFirstPage) {
+            calledForStore = YES;
             [self storeItems:fetchResult];
         }
     }
     
-    if (self.storagePolicy == BLOfflineAllData) {
+    if (self.storagePolicy == BLOfflineAllData && !calledForStore) {
         [self storeItems:fetchResult];
     }
     [self processFetchResult:fetchResult];
