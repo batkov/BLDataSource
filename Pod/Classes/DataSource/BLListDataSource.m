@@ -203,24 +203,22 @@
 
 - (BOOL) refreshContentIfPossible {
     NSAssert(self.state != BLDataSourceStateInit, @"We actually shouldn't be here");
-    if (self.state == BLDataSourceStateLoadContent)
+    if (self.state == BLDataSourceStateLoadContent || self.state == BLDataSourceStateRefreshContent) {
         return NO;
-    if (self.state == BLDataSourceStateRefreshContent)
-        return NO;
+    }
     self.paging = nil;
     [self startContentRefreshing];
     return YES;
-    
 }
 
 - (BOOL) loadMoreIfPossible {
-    if (self.state == BLDataSourceStateLoadContent)
+    NSAssert(self.state != BLDataSourceStateInit, @"We actually shouldn't be here");
+    if (self.state != BLDataSourceStateContent) {
         return NO;
-    if (self.state == BLDataSourceStateRefreshContent)
-        return NO;
-    
-    if (self.state != BLDataSourceStateContent)
-        return NO;
+    }
+    // We shouldn't check here for canLoadMore
+    // Case user awaits for next item to appear
+    // and swipe reload from bottom
     [self startContentRefreshing];
     return YES;
 }
