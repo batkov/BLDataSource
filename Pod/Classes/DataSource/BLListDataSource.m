@@ -236,8 +236,9 @@
 }
 
 - (BLDataStructure *) dataStructureFromFetchResult:(BLBaseFetchResult *) fetchResult {
-    if (self.dataStructreBlock) {
-        BLDataStructure * dataStructure = self.dataStructreBlock(fetchResult);
+    if (self.dataStructureBlock) {
+        NSAssert(self.dataSortingBlock == nil, @"dataSortingBlock is ignored if you are using dataStructureBlock");
+        BLDataStructure * dataStructure = self.dataStructureBlock(fetchResult);
         NSAssert([dataStructure isKindOfClass:[BLDataStructure class]], @"Wrong class or nil");
         return dataStructure;
     }

@@ -51,8 +51,12 @@ typedef void (^BLItemsStoredBlock)(NSError * error);
 @property (nonatomic, copy) dispatch_block_t itemsChangedBlock;
 @property (nonatomic, copy) BLFetchResultBlock fetchResultBlock; // Will return results from BLSimpleListFetchResult by default
 
-@property (nonatomic, copy) BLDataStructureBlock dataStructreBlock; // Will return BLDataStructure by default
-@property (nonatomic, copy) BLDataSortingBlock dataSortingBlock; // The sorting is BLDataSortingCreatedAt by default
+@property (nonatomic, copy) BLDataStructureBlock dataStructureBlock; // Will return instance of BLDataStructure by default
+
+// Please be carefull
+// Both dataSortingBlock and customSortingBlock ignored if dataStructureBlock is set
+// You need to provide own sorting into dataStructureBlock
+@property (nonatomic, copy) BLDataSortingBlock dataSortingBlock; // BLDataSortingCreatedAt by default
 @property (nonatomic, copy) BLCustomSortingBlock customSortingBlock; // You need to return BLDataSortingSortingCustom in dataSortingBlock id you want to use
 
 @property (nonatomic, copy) BLItemsStoredBlock storedBlock; // Called after all objects stored
