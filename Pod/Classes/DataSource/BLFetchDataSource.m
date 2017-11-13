@@ -158,6 +158,12 @@
         default:
             break;
     }
+    
+    // Do not reload
+    if (delay < 0) {
+        return;
+    }
+    
     __weak typeof(self) selff = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [selff refreshContentIfPossible];
