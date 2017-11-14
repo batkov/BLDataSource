@@ -10,13 +10,23 @@
 
 @interface BLFetchDataSource : BLDataSource
 @property (nonatomic, assign) BLFetchMode fetchMode; // BLFetchModeOnlineOffline by default
-@property (nonatomic, assign) NSTimeInterval defaultFetchDelay; // 15 second. How long till we reload data
-@property (nonatomic, assign) NSTimeInterval defaultErrorFetchDelay; // 5 second. How long till we reload data if error occurred
+
+// 15 second. How long till we reload data. Set -1 to disable reload
+@property (nonatomic, assign) NSTimeInterval defaultFetchDelay;
+
+// 5 second. How long till we reload data if error occurred. Set -1 to disable reload
+@property (nonatomic, assign) NSTimeInterval defaultErrorFetchDelay;
+
 @property (nonatomic, strong) id<BLBaseFetch> fetch;
 @property (nonatomic, assign) BOOL storeFetchedObject; // Default NO
 @property (nonatomic, strong, readonly) id fetchedObject;
 @property (nonatomic, copy) dispatch_block_t fetchedObjectChanged;
 @property (nonatomic, copy) BLFetchResultBlock fetchResultBlock; // Will return results from BLSimpleListFetchResult by default
+
+// Default YES
+// If YES will stop auto-refresh when app gone to background and start again
+// if delay conditions are met
+@property (nonatomic, assign) BOOL respectBackgroundMode;
 
 - (instancetype) init NS_UNAVAILABLE;
 - (instancetype) new NS_UNAVAILABLE;

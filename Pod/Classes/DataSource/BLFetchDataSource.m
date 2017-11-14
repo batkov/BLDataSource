@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) id fetchedObject;
 
+@property (nonatomic, strong) NSDate * goneToBackgroundTime;
+@property (nonatomic, assign) BOOL isInBackgroundMode;
 @end
 
 @implementation BLFetchDataSource
@@ -24,6 +26,7 @@
         self.defaultFetchDelay = 15;
         self.defaultErrorFetchDelay = 15;
         self.storeFetchedObject = NO;
+        self.respectBackgroundMode = YES;
         self.fetchResultBlock = ^(id object, BOOL isLocal) {
             if (isLocal) {
                 return [BLSimpleListFetchResult fetchResultForLocalObject:object];
@@ -33,6 +36,8 @@
     }
     return self;
 }
+
+#pragma mark -
 
 - (void)fetchOfflineData:(BOOL) refresh {
     if (self.fetchMode == BLFetchModeOnlineOnly) {
@@ -145,29 +150,47 @@
 }
 
 #pragma mark -
--(void)reloadDataWithDelay {
-    int delay = self.defaultFetchDelay;
+- (NSTimeInterval) currentStateDelay {
+    NSTimeInterval delay = self.defaultFetchDelay;
     switch (self.state) {
         case BLDataSourceStateInit:
         case BLDataSourceStateLoadContent:
         case BLDataSourceStateRefreshContent:
-            return;
+            return -1;
         case BLDataSourceStateError:
             delay = self.defaultErrorFetchDelay;
             break;
         default:
             break;
     }
+    return delay;
+}
+
+- (void) reloadDataWithDelay {
+    NSTimeInterval delay = [self currentStateDelay];
     
     // Do not reload
-    if (delay < 0) {
+    if (![self automaticFetchActive:delay]) {
         return;
     }
     
     __weak typeof(self) selff = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // Do not reload if we gone to background.
+        // But remember that we have tried and respect
+        // time when retry was scheduled
+        if (selff.isInBackgroundMode) {
+            NSDate * newGoneToBgDate = [NSDate dateWithTimeIntervalSinceNow:-delay];
+            NSAssert([newGoneToBgDate timeIntervalSince1970] > [selff.goneToBackgroundTime timeIntervalSince1970], @"This does mean that reloadDataWithDelay was started AFTER gone to BG. Investigate what is going on.");
+            selff.goneToBackgroundTime = newGoneToBgDate;
+            return;
+        }
         [selff refreshContentIfPossible];
     });
+}
+
+-(BOOL) automaticFetchActive:(NSTimeInterval)delay {
+    return delay >= 0 && !self.isInBackgroundMode;
 }
 
 -(void)setState:(BLDataSourceState)state {
@@ -188,6 +211,56 @@
         return self.fetchResultBlock(object, YES);
     }
     return nil; // For subclassing
+}
+
+#pragma mark - Bg/Fg mode methods
+
+-(void)setRespectBackgroundMode:(BOOL)respectBackgroundMode {
+    _respectBackgroundMode = respectBackgroundMode;
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidBecomeActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
+    if (_respectBackgroundMode) {
+        [self setupSwitchToBackgroundMode];
+    }
+}
+
+-(void)setupSwitchToBackgroundMode {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(switchToBackgroundMode)
+                                                 name:UIApplicationDidEnterBackgroundNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(switchToBackgroundMode)
+                                                 name:UIApplicationWillResignActiveNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(switchToForegroundMode)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(switchToForegroundMode)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:nil];
+}
+
+-(void)switchToBackgroundMode {
+    self.isInBackgroundMode = YES;
+    self.goneToBackgroundTime = [NSDate date];
+}
+
+-(void)switchToForegroundMode {
+    self.isInBackgroundMode = NO;
+    NSTimeInterval timeGone = [[NSDate date] timeIntervalSince1970] - [self.goneToBackgroundTime timeIntervalSince1970];
+    NSTimeInterval delay = [self currentStateDelay];
+    if ([self automaticFetchActive:delay] && timeGone > delay) {
+        [self refreshContentIfPossible];
+    }
+}
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark -
