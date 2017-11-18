@@ -100,7 +100,7 @@
     NSUInteger oldCount = [mutable count];
     [mutable removeObject:item];
     items = nil;
-    self.sections[section] = [self processItems:mutable inSection:section];
+    self.sections[section] = [self sortedItemsFrom:mutable];
     if (self.changedBlock) {
         self.changedBlock();
     }
@@ -148,34 +148,38 @@
             [newItems addObject:object];
         }
     }
+    return [self sortedItemsFrom:newItems];
+}
+
+- (NSArray<id<BLDataObject>> *) sortedItemsFrom:(NSArray<id<BLDataObject>> *)items {
     
     switch (self.sorting) {
         case BLDataSortingUpdatedAt:
-            return [newItems sortedArrayUsingComparator:^NSComparisonResult(id<BLDataObject>  _Nonnull obj1, id<BLDataObject> _Nonnull obj2) {
+            return [items sortedArrayUsingComparator:^NSComparisonResult(id<BLDataObject>  _Nonnull obj1, id<BLDataObject> _Nonnull obj2) {
                 return [obj2.updatedAt compare:obj1.updatedAt];
             }];
         case BLDataSortingUpdatedAtReverse:
-            return [newItems sortedArrayUsingComparator:^NSComparisonResult(id<BLDataObject>  _Nonnull obj1, id<BLDataObject> _Nonnull obj2) {
+            return [items sortedArrayUsingComparator:^NSComparisonResult(id<BLDataObject>  _Nonnull obj1, id<BLDataObject> _Nonnull obj2) {
                 return [obj1.updatedAt compare:obj2.updatedAt];
             }];
         case BLDataSortingCreatedAt:
-            return [newItems sortedArrayUsingComparator:^NSComparisonResult(id<BLDataObject>  _Nonnull obj1, id<BLDataObject> _Nonnull obj2) {
+            return [items sortedArrayUsingComparator:^NSComparisonResult(id<BLDataObject>  _Nonnull obj1, id<BLDataObject> _Nonnull obj2) {
                 return [obj1.createdAt compare:obj2.createdAt];
             }];
         case BLDataSortingCreatedAtReverse:
-            return [newItems sortedArrayUsingComparator:^NSComparisonResult(id<BLDataObject>  _Nonnull obj1, id<BLDataObject> _Nonnull obj2) {
+            return [items sortedArrayUsingComparator:^NSComparisonResult(id<BLDataObject>  _Nonnull obj1, id<BLDataObject> _Nonnull obj2) {
                 return [obj2.createdAt compare:obj1.createdAt];
             }];
         case BLDataSortingSortingCustom:
             if (self.customSortingBlock) {
-                return self.customSortingBlock(newItems);
+                return self.customSortingBlock(items);
             }
-            return [self orderedArrayFromArray:newItems];
+            return [self orderedArrayFromArray:items];
             
         default:
             break;
     }
-    return [NSArray arrayWithArray:newItems];
+    return [NSArray arrayWithArray:items];
 }
 
 - (NSArray<id<BLDataObject>> *) orderedArrayFromArray:(NSArray<id<BLDataObject>> *)sourceArray {
