@@ -13,6 +13,7 @@
 		163A72A1E81EEBA944B2FE1E0D2C8D60 /* BLPaging.m in Sources */ = {isa = PBXBuildFile; fileRef = F199963B556D75033DB8233318DA7FC9 /* BLPaging.m */; };
 		1663DBD0980E36821AB2312A4840735D /* BLSimpleListFetchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF868861EEE93F8D7327B3E3ED01E01 /* BLSimpleListFetchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		181C1F60C018857E614419C42ACD9E04 /* BLBaseFetchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A23CA63C0355C60277633F85EF09DBB /* BLBaseFetchResult.m */; };
+		3D2B5FDE1FC08ED000194FCE /* BLBaseUpdate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2B5FDD1FC08ED000194FCE /* BLBaseUpdate.h */; };
 		3DB68A431FA1E8410041065E /* BLFetchDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB68A411FA1E8410041065E /* BLFetchDataSource.h */; };
 		3DB68A441FA1E8410041065E /* BLFetchDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB68A421FA1E8410041065E /* BLFetchDataSource.m */; };
 		46ECE020B88263AF561214B0152BC49C /* BLSimpleListFetchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E4235EDB19CD8E6F3A3A57B4F32DE430 /* BLSimpleListFetchResult.m */; };
@@ -54,6 +55,7 @@
 		2FA5A52CDC905F888FA5D995EEDBCBA1 /* BLDataStructure+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLDataStructure+Subclass.h"; sourceTree = "<group>"; };
 		361B8CA3E8D435D3A007DBAB76074DB2 /* BLDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLDataSource.m; sourceTree = "<group>"; };
 		38356FFF5E507C865D7E9E86BF6337EF /* BLListDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLListDataSource.h; sourceTree = "<group>"; };
+		3D2B5FDD1FC08ED000194FCE /* BLBaseUpdate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLBaseUpdate.h; sourceTree = "<group>"; };
 		3DB68A411FA1E8410041065E /* BLFetchDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLFetchDataSource.h; sourceTree = "<group>"; };
 		3DB68A421FA1E8410041065E /* BLFetchDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLFetchDataSource.m; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -145,11 +147,20 @@
 				9D755A42B41B128414AE1A330ACDDFF9 /* BLDataObject.h */,
 				6AE5DFF75E501764CCE8ACFDB97389C8 /* DataSource */,
 				1748C244555727AF413CDFA1D0C219B3 /* DataStructure */,
+				3D2B5FDC1FC08E8A00194FCE /* Update */,
 				551E90ADA70301695D36BCD241159DFF /* Fetch */,
 				044DFD235FB7E411ABB95F1068E1DC96 /* FetchResult */,
 				95C455574B9114D2E964EB812733DF4C /* Paging */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		3D2B5FDC1FC08E8A00194FCE /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				3D2B5FDD1FC08ED000194FCE /* BLBaseUpdate.h */,
+			);
+			path = Update;
 			sourceTree = "<group>";
 		};
 		3EA9C61B1491FE76A90943E25F59A766 /* Products */ = {
@@ -279,6 +290,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2B5FDE1FC08ED000194FCE /* BLBaseUpdate.h in Headers */,
 				A07C51712685030F6BE9825B9E996E58 /* BLBaseFetch.h in Headers */,
 				DD69F7CE10955A48A08920CB82A9C8BE /* BLBaseFetchResult+Subclass.h in Headers */,
 				95B6D10EF94E4F56EEC83B5D02C0BD8A /* BLBaseFetchResult.h in Headers */,

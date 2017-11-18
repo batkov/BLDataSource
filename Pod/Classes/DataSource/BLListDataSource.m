@@ -34,18 +34,34 @@
 - (instancetype) initWithFetch:(id<BLBaseFetch>) fetch {
     NSAssert(fetch, @"You need to provide fetch");
     if (self = [super init]) {
-        self.pagingEnabled = YES;
-        self.autoAdvance = NO;
         self.fetch = fetch;
-        self.fetchResultBlock = ^(id object, BOOL isLocal) {
-            if (isLocal) {
-                return [BLSimpleListFetchResult fetchResultForLocalObject:object];
-            }
-            return [BLSimpleListFetchResult fetchResultForObject:object];
-        };
-        self.defaultPageSize = kBLParseListDefaultPagingLimit;
+        self.update = nil;
+        [self commonInit];
     }
     return self;
+}
+
+- (instancetype) initWithFetch:(id<BLBaseFetch>) fetch update:(id<BLBaseUpdate>) update {
+    NSAssert(fetch, @"You need to provide fetch");
+    if (self = [super init]) {
+        self.fetch = fetch;
+        self.update = update;
+        [self commonInit];
+    }
+    return self;
+}
+
+- (void) commonInit {
+    self.storagePolicy = self.update ? BLOfflineFirstPage : BLOfflineDoNotStore;
+    self.pagingEnabled = YES;
+    self.autoAdvance = NO;
+    self.fetchResultBlock = ^(id object, BOOL isLocal) {
+        if (isLocal) {
+            return [BLSimpleListFetchResult fetchResultForLocalObject:object];
+        }
+        return [BLSimpleListFetchResult fetchResultForObject:object];
+    };
+    self.defaultPageSize = kBLParseListDefaultPagingLimit;
 }
 
 - (BLPaging *) paging {
@@ -168,8 +184,11 @@
 }
 
 - (void) storeItems:(BLBaseFetchResult *) fetchResult {
+    NSAssert(self.update, @"You need to provide 'update' to store something");
     __weak typeof(self) selff = self;
-    [self.fetch storeItems:fetchResult callback:^(BOOL result, NSError * _Nullable error) {
+    [self.update storeItems:fetchResult
+              removeOldData:self.storagePolicy == BLOfflineFirstPage
+                   callback:^(BOOL result, NSError * _Nullable error) {
         if (selff.storedBlock) {
             self.storedBlock(error);
         }
@@ -231,7 +250,7 @@
     }
     self.dataStructure.changedBlock = self.itemsChangedBlock;
     if (self.itemsChangedBlock) {
-        self.itemsChangedBlock ();
+        self.itemsChangedBlock (self.dataStructure);
     }
 }
 

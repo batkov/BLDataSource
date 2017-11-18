@@ -30,6 +30,7 @@
 @interface BLListDataSource ()
 @property (nonatomic, strong, readwrite, nullable) BLDataStructure * dataStructure;
 
+@property (nonatomic, strong, readwrite, nullable) id<BLBaseUpdate> update;
 @property (nonatomic, strong, readwrite, nonnull) id<BLBaseFetch> fetch;
 @property (nonatomic, strong, readwrite, nullable) BLPaging * paging;
 @property (nonatomic, assign) BOOL canLoadMore;

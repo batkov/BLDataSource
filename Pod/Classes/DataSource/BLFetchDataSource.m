@@ -13,28 +13,41 @@
 
 @property (nonatomic, strong) id fetchedObject;
 
+@property (nonatomic, strong) id<BLBaseFetch> fetch;
+@property (nonatomic, strong) id<BLBaseUpdate> update;
+
 @property (nonatomic, strong) NSDate * goneToBackgroundTime;
 @property (nonatomic, assign) BOOL isInBackgroundMode;
 @end
 
 @implementation BLFetchDataSource
+- (instancetype) initWithFetch:(id <BLBaseFetch>) fetch update:(id <BLBaseUpdate>) update {
+    NSAssert(fetch, @"You need to provide fetch");
+    if (self = [super init]) {
+        self.fetch = fetch;
+        self.update = update;
+    }
+    return self;
+}
 
 - (instancetype) initWithFetch:(id<BLBaseFetch>) fetch {
     NSAssert(fetch, @"You need to provide fetch");
     if (self = [super init]) {
         self.fetch = fetch;
-        self.defaultFetchDelay = 15;
-        self.defaultErrorFetchDelay = 15;
-        self.storeFetchedObject = NO;
-        self.respectBackgroundMode = YES;
-        self.fetchResultBlock = ^(id object, BOOL isLocal) {
-            if (isLocal) {
-                return [BLSimpleListFetchResult fetchResultForLocalObject:object];
-            }
-            return [BLSimpleListFetchResult fetchResultForObject:object];
-        };
     }
     return self;
+}
+
+- (void) commonInit {
+    self.defaultFetchDelay = 15;
+    self.defaultErrorFetchDelay = 15;
+    self.respectBackgroundMode = YES;
+    self.fetchResultBlock = ^(id object, BOOL isLocal) {
+        if (isLocal) {
+            return [BLSimpleListFetchResult fetchResultForLocalObject:object];
+        }
+        return [BLSimpleListFetchResult fetchResultForObject:object];
+    };
 }
 
 #pragma mark -
@@ -100,7 +113,7 @@
 
 - (void) itemsLoaded:(BLBaseFetchResult *) fetchResult {
     self.fetchedObject = nil;
-    if (self.storeFetchedObject) {
+    if (self.update) {
         [self storeItems:fetchResult];
     }
     [self processFetchResult:fetchResult];
@@ -108,8 +121,10 @@
 }
 
 - (void) storeItems:(BLBaseFetchResult *) fetchResult {
-    [self.fetch storeItems:fetchResult callback:^(BOOL result, NSError * _Nullable error) {
-       
+    [self.update storeItems:fetchResult
+              removeOldData:YES
+                   callback:^(BOOL result, NSError * _Nullable error) {
+        
     }];
 }
 
@@ -145,7 +160,7 @@
     }
     self.fetchedObject = object;
     if (self.fetchedObjectChanged) {
-        self.fetchedObjectChanged ();
+        self.fetchedObjectChanged (self.fetchedObject);
     }
 }
 

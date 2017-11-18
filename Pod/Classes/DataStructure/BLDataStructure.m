@@ -63,7 +63,7 @@
         }
     }
     if (self.changedBlock) {
-        self.changedBlock();
+        self.changedBlock(self);
     }
 }
 
@@ -102,7 +102,7 @@
     items = nil;
     self.sections[section] = [self sortedItemsFrom:mutable];
     if (self.changedBlock) {
-        self.changedBlock();
+        self.changedBlock(self);
     }
     BOOL result = oldCount > [items count];
     return result;
@@ -112,7 +112,7 @@
     NSAssert(item, @"Cannot insert nil item");
     self.sections[section] = [self processItems:@[item] inSection:section];
     if (self.changedBlock) {
-        self.changedBlock();
+        self.changedBlock(self);
     }
 }
 
