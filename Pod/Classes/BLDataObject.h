@@ -27,13 +27,13 @@
 @protocol BLDataObject <NSObject>
 
 // Unique string that differ this object from others
-- (NSString* __nonnull) objectId;
+- (NSString* __nullable) objectId;
 
 // Creation date
-- (NSDate * __nonnull) createdAt;
+- (NSDate * __nullable) createdAt;
 
 // Date of last update
-- (NSDate * __nonnull) updatedAt;
+- (NSDate * __nullable) updatedAt;
 
 @optional
 // If this object is some kind of proxy you can
