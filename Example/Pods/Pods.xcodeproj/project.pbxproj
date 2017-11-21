@@ -14,6 +14,8 @@
 		1663DBD0980E36821AB2312A4840735D /* BLSimpleListFetchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF868861EEE93F8D7327B3E3ED01E01 /* BLSimpleListFetchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		181C1F60C018857E614419C42ACD9E04 /* BLBaseFetchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A23CA63C0355C60277633F85EF09DBB /* BLBaseFetchResult.m */; };
 		3D2B5FDE1FC08ED000194FCE /* BLBaseUpdate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2B5FDD1FC08ED000194FCE /* BLBaseUpdate.h */; };
+		3D7DCCB41FC42A64005CD34F /* BLInteractiveDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7DCCB21FC42A64005CD34F /* BLInteractiveDataSource.h */; };
+		3D7DCCB51FC42A64005CD34F /* BLInteractiveDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7DCCB31FC42A64005CD34F /* BLInteractiveDataSource.m */; };
 		3DB68A431FA1E8410041065E /* BLFetchDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB68A411FA1E8410041065E /* BLFetchDataSource.h */; };
 		3DB68A441FA1E8410041065E /* BLFetchDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB68A421FA1E8410041065E /* BLFetchDataSource.m */; };
 		46ECE020B88263AF561214B0152BC49C /* BLSimpleListFetchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E4235EDB19CD8E6F3A3A57B4F32DE430 /* BLSimpleListFetchResult.m */; };
@@ -56,6 +58,9 @@
 		361B8CA3E8D435D3A007DBAB76074DB2 /* BLDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLDataSource.m; sourceTree = "<group>"; };
 		38356FFF5E507C865D7E9E86BF6337EF /* BLListDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLListDataSource.h; sourceTree = "<group>"; };
 		3D2B5FDD1FC08ED000194FCE /* BLBaseUpdate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLBaseUpdate.h; sourceTree = "<group>"; };
+		3D7DCCB21FC42A64005CD34F /* BLInteractiveDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLInteractiveDataSource.h; sourceTree = "<group>"; };
+		3D7DCCB31FC42A64005CD34F /* BLInteractiveDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLInteractiveDataSource.m; sourceTree = "<group>"; };
+		3D7DCCB61FC42AD3005CD34F /* BLInteractiveDataSource+Subclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLInteractiveDataSource+Subclass.h"; sourceTree = "<group>"; };
 		3DB68A411FA1E8410041065E /* BLFetchDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLFetchDataSource.h; sourceTree = "<group>"; };
 		3DB68A421FA1E8410041065E /* BLFetchDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLFetchDataSource.m; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -197,6 +202,9 @@
 				C6117D55ED3518FBB09CEBD7E52AE933 /* BLDataSource.h */,
 				361B8CA3E8D435D3A007DBAB76074DB2 /* BLDataSource.m */,
 				213FE8F40BB4EDFD5083D66F36AF4F0C /* BLDataSource+Subclass.h */,
+				3D7DCCB21FC42A64005CD34F /* BLInteractiveDataSource.h */,
+				3D7DCCB31FC42A64005CD34F /* BLInteractiveDataSource.m */,
+				3D7DCCB61FC42AD3005CD34F /* BLInteractiveDataSource+Subclass.h */,
 				38356FFF5E507C865D7E9E86BF6337EF /* BLListDataSource.h */,
 				F7684519965DE751EF78DD0285990D9D /* BLListDataSource.m */,
 				4F553A78A07DD31E750862E1764F665C /* BLListDataSource+Subclass.h */,
@@ -297,6 +305,7 @@
 				FF64089FC619F40DABDD098D9B72EFB6 /* BLDataKeys.h in Headers */,
 				7E39CCEA8C437B59F91651A6E23FDE16 /* BLDataObject.h in Headers */,
 				F3E6365AF8C1C196AA3D14F924C77D8E /* BLDataSource+Subclass.h in Headers */,
+				3D7DCCB41FC42A64005CD34F /* BLInteractiveDataSource.h in Headers */,
 				757E9831154F83A04DB9C9F4B092AF11 /* BLDataSource.h in Headers */,
 				141BFD00EBF14C33404867FFB96A2C0F /* BLDataStructure+Subclass.h in Headers */,
 				122CED689F13FFC807684B0419FDBF43 /* BLDataStructure.h in Headers */,
@@ -393,6 +402,7 @@
 				D722E6F28E78461CC5B827DD03122983 /* BLListDataSource.m in Sources */,
 				163A72A1E81EEBA944B2FE1E0D2C8D60 /* BLPaging.m in Sources */,
 				AD7254EA60B7A848C5E714431A99E3DD /* BLReadableListDataSource.m in Sources */,
+				3D7DCCB51FC42A64005CD34F /* BLInteractiveDataSource.m in Sources */,
 				46ECE020B88263AF561214B0152BC49C /* BLSimpleListFetchResult.m in Sources */,
 				3DB68A441FA1E8410041065E /* BLFetchDataSource.m in Sources */,
 			);
