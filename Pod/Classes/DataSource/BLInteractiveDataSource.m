@@ -32,7 +32,7 @@
     if (self = [super init]) {
         self.fetch = fetch;
         self.update = update;
-        [self commonInit];
+        [self interactiveDataSourceCommonInit];
     }
     return self;
 }
@@ -41,12 +41,12 @@
     NSAssert(fetch, @"You need to provide fetch");
     if (self = [super init]) {
         self.fetch = fetch;
-        [self commonInit];
+        [self interactiveDataSourceCommonInit];
     }
     return self;
 }
 
-- (void) commonInit {
+- (void) interactiveDataSourceCommonInit {
     self.fetchMode = BLFetchModeOnlineOffline;
     self.fetchResultBlock = ^(id object, BOOL isLocal) {
         if (isLocal) {
