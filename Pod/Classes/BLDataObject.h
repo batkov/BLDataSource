@@ -42,8 +42,12 @@
 - (NSArray * __nonnull) objectsToStore;
 
 // Return NO if object need to be fetched before use
-// If not implemented consider isDataAvailable as YES
+// If not implemented consider 'isDataAvailable' as YES
 - (BOOL) isDataAvailable;
+
+// Return NO if object(or objects for conplex class) need to be fetched before use
+// If not implemented consider 'isAllDataAvailable' as YES
+- (BOOL) isAllDataAvailable;
 
 // Similar to 'objectToStore' can customize object to be fetched
 - (id __nonnull) objectToFetch;
